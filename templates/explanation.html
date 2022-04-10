@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Talk to Kotaro</title>
+</head>
+<style>
+	body {
+		display: block;
+		background-image: url('./static/IMG/26798203.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+	div {
+		display: flex;
+		justify-content: center;
+	}
+</style>
+<body>
+
+<script type="text/javascript" src="{{ url_for('static', filename='instructions.js') }}"></script>
+
+
+<div>
+<button id="eng" style="height:40px;width:100px">English</button>
+
+<button id="jap" style="height:40px;width:100px">日本語</button>
+
+<button id="esp" style="height:40px;width:100px">Español</button>
+
+<button id="ptbr" style="height:40px;width:100px">Português</button>
+</div>
+
+<div>
+<p></p>
+</div>
+<h1 id="Title">Consent Form and Experiment Instructions</h1>
+<div>
+<textarea id="exp" readonly name="w3review" rows="45" cols="75" style="resize: none;">
+Head of Research: Professor Ikuo Mizuuchi
+
+Ethics Committee approval number: No. 210801-0321
+
+	We are pleased to announce that the following medical research for participants over the age of 16 will be conducted in our laboratory in compliance with the Japanese ethical guidelines, laws and  regulations; with the approval of the Tokyo University of Agriculture and Technology (hereon referred as TUAT) Ethics Review Committee and the permission of the President of TUAT.
+	With the approval of the TUAT Ethics Review Committee and the permission of the President, we will conduct the following medical research in compliance with the ethical guidelines and laws and regulations. We would like to kindly ask for your cooperation.  There will be no excessive burden on the subjects by participating in this research. In addition, we will take the utmost care to protect the personal information of the subjects.
+
+
+1) Research Purpose
+
+	This experiment provides a friendly robot-like avatar (Kotaro), with whom you can talk to for as long as you like. You can have as many conversations as you wish, that is there is no minimum nor maximum time for the duration of this experiment.
+	Video images of your facial expressions will be captured from the camera of your computer or smartphone and stored on the server of our laboratory, along with the emotions recognized be the facial expression recognition software.  This data will later be used to analyze how facial expressions change depending on how the robot avatar speaks. Additionally, what you say to the avatar will also be recorded and stored for posterior analysis, so please be careful with what you say.
+	All data recorded in this experiment will be associated only with your login ID, so the researchers will not be able to identify you, unless they know your face and voice.
+
+2) Voluntary research cooperation and freedom of withdrawal
+
+	Participation in this research is completely voluntary. In other words, if you want to contribute to the development of science, you can participate; and you can stop participating whenever you want without any repercussions. The data you contribute to this study will be securely stored for 5 years, during which time you can request the deletion of your data. All data collected will be associated with your login ID, not your real name. Therefore, data retrieval and deletion can only be done on the Mizuuchi Lab web platform, and the researcher  will not be able to know whom data belongs to.
+	It is important to notice that participants under 20 years old can have the removal of their data and withdrawal from the experiment requested by their parents or legal guardians.
+
+
+3) Research methods and research Cooperation Items
+
+Research period: from the date approved by the Institutional Review Board to March 31, 2022
+
+Research Method
+
+	For the development of the Human Impression estimation module, a web platform named “Talk to Kotaro!” hosted in Mizuuchi Lab’s servers was implemented. That platform consists of a robot-like avatar with whom volunteers may hold a conversation. However, before volunteers can participate in the experiment, they need to create a profile which requires some basic information: login ID; password; age; gender; country/region of origin; mother language; other languages the user speaks; if the volunteer lives or has lived abroad and where; and how many years the volunteer has lived abroad.
+Research Cooperation Items
+
+1. You need a webcam to participate;
+2. Perform the experiment in a well-lit place;
+3. Enter your login ID, password and more to create your profile.
+From the second time onward, please log in with the login ID and password you created;
+4. When you are ready to speak, click the Talk button (green button with the drawing of an ear);
+5. When you're done talking, click the button again (it will have become blue with the drawing of a speech bubble);
+6. The avatar will speak, so listen and react naturally;
+7. You can repeat steps 4-6 as often as you like, but please, do not close the page before the avatar stops speaking;
+8. If you have time to log out, please complete a 10-item survey.
+9. If you want to delete all the collected data, click the "Delete data" button at any time.
+Click and click the "OK" button to confirm.
+
+4) Benefits and burdens for study subjects
+
+	Research volunteers will  spend  time talking with a semantic-free speech generating robot-like avatar for as long as desired. We hope that the volunteers will enjoy the experience. There will be no financial compensation for participation in this experiment.
+
+5)Protection of personal information
+
+For this research, personal data of research voluntaries will be stored in Mizuuchi Lab’s servers. The aforementioned data  consists of:
+    1. Login ID;
+    2. Password;
+    3. Age ;
+    4. Gender;
+    5. Country/Region of Origin;
+    6. Mother Language;
+    7. Other Languages you Speak;
+    8. If you live or have lived abroad, write where;
+    9. Years living abroad.
+    10. Voice records of what research volunteers say to the robot avatar;
+    11. Video records of voluntaries facial expressions after their listen to the speech of the robot-like avatar.
+    12. Questionnaire answers
+
+6) Method of Disclosure of Research Protocols and Information on Research
+
+	The full research protocol and methods will be disclosed after March 31th of 2022 at the “Talk to Kotaro” Web Platform. The protocol cannot currently be shared because full knowledge of the research protocol may alter results of the research.
+
+7) Publication of Research Results
+
+	The results of this research will be presented at domestic and international conferences and published in academic papers.
+
+
+
+8) Attribution of Intellectual Property Rights arising from Research
+	Intellectual property cannot be attributed to volunteers. Any intellectual property resulting from this research experiment belongs to TUAT and the researchers.
+
+9) Data Handling Policy after research completion
+
+	Five years after the start of the experiment, the profile data, audio and video recordings of all volunteers will be deleted using the latest software (BleachBit) to guarantee that no one, not even the researchers, will be able to recover the data.
+
+10) Research funding and conflict of interest
+
+	Researchers involved declare that they do not have any conflict of interest regarding this research and experiment. This experiment was not funded by any organization other than TUAT.
+
+11) Contact Information:
+
+For inquiries regarding this experiment and the current research, please contact the following:
+
+Ikuo Mizuuchi,
+Tokyo University of Agriculture and Technology,
+Graduate School of Engineering,
+Mechanical Systems Engineering Department
+Email:  office@mizuuchi.lab.tuat.ac.jp
+
+12. Consent for cooperation in the experiment
+
+	If you have read the above explanation, understoo each item, and voluntarily agree to cooperate in the research, please click the [Agree] button. If you do not agree, please close this window.
+</textarea>
+
+</div>
+
+<div>
+<img id="mail" src="./static/IMG/mail.png">
+</div>
+
+<div>
+<a href="consent2" id=test><button id="go" style="height:40px;width:100px">I Agree</button></a>
+
+</div>
+
+
+</body>
+<script type="text/javascript" src="./static/instructions.js"></script>
+</html>

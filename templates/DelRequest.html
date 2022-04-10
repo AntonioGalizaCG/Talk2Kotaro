@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Talk to Kotaro</title>
+    <style>
+    	body {
+    		display: block;
+    		background-image: url('./static/IMG/26798203.jpg');
+    		background-repeat: no-repeat;
+    		background-attachment: fixed;
+    		background-size: 100% 100%;
+    	}
+    	div {
+    		justify-content: center;
+    	}
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div style="text-align:center;">
+        <hr>
+
+        <p>This page is for requesting the exclusion of data belonging to minors. Fill the form below:</p>
+
+        <p> Esta página é para solicitar a exclusão de dados pertencentes a menores. Preencha o formulário abaixo: </p>
+
+        <p> Esta página es para solicitar la exclusión de datos pertenecientes a menores. Complete el siguiente formulario:</p>
+
+        <p>このページは、未成年者に属するデータの除外をリクエストするためのものです。 以下のフォームに記入してください：</p>
+      </div>
+      <hr>
+
+      <form enctype="multipart/form-data" action="submitRequest" method = "POST">
+      <div style="text-align: center">
+
+        <label id="lID" for="fID">ID: </label><br>
+        <input type="text" id="fID" name="fID">
+        <br><br>
+        <hr>
+
+        <div style="text-align:center;">
+          <p>Email adress for deletion confirmation.</p>
+
+          <p>Endereço de e-mail para confirmação de exclusão. </p>
+
+          <p> Correo electrónico para confirmar la exclusión de los datos. </p>
+
+          <p>削除確認用のメールアドレス。</p>
+
+          <input type="text" id="fMail" name="fMail">
+
+        </div>
+        <hr>
+
+        <div style="text-align:center;">
+          <p>If you do not know the ID of the profile, upload a picture so it is possible to identify the minor.</p>
+
+          <p> Se você não sabe o ID do perfil, envie uma foto para que seja possível identificar o menor. </p>
+
+          <p> Si no conoce el ID del perfil, suba una foto para que sea posible identificar al menor. </p>
+
+          <p>プロフィールのIDがわからない場合は、未成年者を特定できるように写真をアップロードしてください。</p>
+
+          <input type="file" accept="image/*,.pdf" id="fFile" name="fFile">
+
+        </div>
+        <hr>
+
+        <label id="lexp" for="exp">Reasons for deletion/Razões para exclusão/Razones para la eliminación/削除の理由: </label><br>
+        <textarea id="exp" name="exp" rows="10" cols="50" style="resize: none;">
+        </textarea><br><br>
+        <hr>
+
+      </div>
+      <div style="text-align: center">
+      <input id="submit" type="submit" value="Submit">
+
+      <p id="instructions">Click on the "Submit" button to create your profile.</p>
+      </div>
+      </form>
+      <hr>
+
+  </main>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head><title>Talk to Kotaro</title></head>
+<style>
+div {
+  width: 500px;
+  margin: auto;
+
+}
+</style>
+  <style>
+  header{
+	width:100%;
+	text-align:center;
+	color:#ffffff;
+	background-color:#48cc7a;
+  }
+   footer{
+	width:100%;
+   position: absolute;
+    bottom: 0;
+	background-color: #4a76d0;
+	color:#ffffff;
+	text-align:center;
+  }
+  </style>
+<body>
+  <header>
+  <table style="width:100%; text-align:center;">
+<thead>
+  <tr>
+    <th>  <a href="http://mizuuchi.lab.tuat.ac.jp/"><img src="../static/IMG/MizuuchiLabLogo.png" alt="MizuuchiLabLogo" style="width: 25%;height: auto;"></a></th>
+    <th style="width:30%;">  <h1>Talk to Kotaro!</h1>
+  <h3>and help making robots speak better</h3></th>
+    <th> <a href="https://www.tuat.ac.jp/"><img src="../static/IMG/TUAT.png" alt="MizuuchiLabLogo" style="width: 50%;height: auto;"></a> </th>
+  </tr>
+</thead>
+</table>
+  </header>
+<div style="text-align: center">
+
+<button id="eng" style="height:40px;width:100px">English</button>
+<button id="jap" style="height:40px;width:100px">日本語</button>
+<button id="esp" style="height:40px;width:100px">Español</button>
+<button id="ptbr" style="height:40px;width:100px">Português</button>
+
+</div>
+
+
+<h1 id="title" style="text-align: center">Profile Creation</h1>
+<h3 id="truth" style="text-align: center">Your data will be used for scientific research, so please, be truthful.</h3>
+<form action="create_profile" method = "POST">
+<div style="text-align: right">
+  <label id="fnamel" for="fname" style="color:red;">Login ID (use alphanumeric characters only): </label>
+  <input type="text" id="fname" name="fname"><br><br>
+
+  <label id="lnamel" for="lname" style="color:red;">Password (do not use ;):</label>
+  <input type="PASSWORD" id="lname" name="lname"><br><br>
+
+  <label id="lagel" for="lage">Age:</label>
+  <input type="text" id="lage" name="lage"><br><br>
+
+  <label id="lgl" for="lg">Gender:</label>
+  <input type="text" id="lg" name="lg"><br><br>
+
+  <label id="ldokol" for="ldoko">Country/Region of Origin:</label>
+  <input type="text" id="ldoko" name="ldoko"><br><br>
+
+  <label id="lmlangl" for="lmlang">Mother language:</label>
+  <input type="text" id="lmlang" name="lmlang"><br><br>
+
+  <label id="lolangl" for="lolang">Other languages you speak:</label>
+  <input type="text" id="lolang" name="lolang"><br><br>
+
+  <label id="labrl" for="labr">If you live or have lived abroad, write where:</label>
+  <input type="text" id="labr" name="labr"><br><br>
+
+  <label id="ldrl" for="ldr">Years living abroad:</label>
+  <input type="text" id="ldr" name="ldr"><br><br>
+<div style="text-align: center">
+<input id="submit" type="submit" value="Submit">
+
+<p id="instructions">Click on the "Submit" button to create your profile.</p>
+</div>
+</form>
+</body>
+<script type="text/javascript" src="./static/ProfileCreation.js"></script>
+</html>
