@@ -5,6 +5,10 @@ $(document).ready(function(){
   var photo = document.getElementById('photo');
   var localMediaStream = null;
   let formu = document.getElementById('canca');
+  var stop_recording = false;
+  var oneShot = false;
+  var counter = false;
+
   var constraints = {
     video: {
       width: { min: 640 },
@@ -41,7 +45,11 @@ buttonSpeak.onclick = function() {
 			gumStream.getAudioTracks()[0].stop();
 			//create the wav blob and pass it on to createDownloadLink
 			rec.exportWAV(createDownloadLink);
-			audio.play();
+      //////////////////////////////////////////////////////////////////
+      oneShot = true;
+      counter = false;
+      //////////////////////////////////////////////////////////////////
+      // audio.play();
 			var xhr = new XMLHttpRequest();
 			xhr.onreadystatechange = function() {
 				if (xhr.readyState == 4 && xhr.status == 200) {
@@ -52,6 +60,7 @@ buttonSpeak.onclick = function() {
 			xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 			xhr.send(JSON.stringify({ status: "true" }));
 			reccer = true;
+      stop_recording = false;
 		}else{
 			audio = new Audio('wav');
 			var constraints = { audio: true, video:false }
@@ -119,7 +128,7 @@ function Mouther(){
 			boca = false;
       buttonSpeak.disabled=false;
       //buttonSpeak.style.backgroundColor = '#00cccc'
-			if (reccer){
+			if (reccer && stop_recording){
         document.getElementById("SpeakImage").style.display = "none";
         document.getElementById("SpeakDisImage").style.display = "none";
         document.getElementById("ListenImage").style.display = "block";
@@ -152,11 +161,23 @@ setInterval(function () {
     if (reccer){
     frequency = 50;
     }
-		var xhr = new XMLHttpRequest();
-		xhr.open("POST", "rec");
-		xhr.setRequestHeader('Content-Type', 'application/json');
-		xhr.send(JSON.stringify(dataURL));
-}, frequency);
+    if (oneShot && counter){
+      ctx.fillRect(0, 0, 480, 640);
+  		let dataURL = canvas.toDataURL('image/jpeg');
+      var xhr = new XMLHttpRequest();
+  		xhr.open("POST", "rec");
+  		xhr.setRequestHeader('Content-Type', 'application/json');
+  		xhr.send(JSON.stringify(dataURL));
+      oneShot = false;
+      counter = false;
+      audio.play();
+      stop_recording = true;
+    }else{
+      if (!counter){counter = true;}
+  		var xhr = new XMLHttpRequest();
+  		xhr.open("POST", "rec");
+  		xhr.setRequestHeader('Content-Type', 'application/json');
+  		xhr.send(JSON.stringify(dataURL));}}, frequency);
   }).catch(function(error) {
     console.log(error);
   });

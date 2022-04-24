@@ -29,8 +29,6 @@ dbLoc = "./memory/profile.sql"
 videoLoc = "./memory/video/"
 audioLoc = "./memory/audio/"
 
-
-
 @app.route('/')
 def index():
 	session["volume"] = 0
@@ -63,7 +61,7 @@ def favicon():
 
 @app.route('/exp')
 def exper():
-	return render_template('index.html')
+	return render_template('index.html');
 
 @app.route('/main', methods = ['POST'])
 def main():
@@ -139,6 +137,7 @@ def audio():
 
 @app.route("/wav")
 def Hanasu():
+
 	session["volume"] = 0
 	session["speed"] = 0
 	session["pitch"] = 0
@@ -194,11 +193,8 @@ def Hanasu():
 	session["global_phrase"] = phrase
 	print(phrase)
 	def generate():
+		time.sleep(1)
 		audio = c.stdout.read(1024)
-##		makeAudio()
-##		with open("./wav.wav", "rb") as fwav:
-		##data = fwav.read(1024)
-		##print(data)
 		while audio:
 				yield audio
 				audio = c.stdout.read(1024)

@@ -29,7 +29,7 @@ COPY mailer.py /app
 COPY locker.py /app
 COPY encryption.py /app
 #COPY EmotionEstimator.py /app
-COPY TruePhoneme.py /app
+COPY forbidden_phonemes.py /app
 COPY utils.py /app
 COPY tabler.py /app
 COPY model.h5 /app
