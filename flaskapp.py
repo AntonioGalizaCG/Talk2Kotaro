@@ -15,6 +15,8 @@ import numpy as np
 from forbidden_phonemes import *
 import os
 import psutil
+import io
+import soundfile as sf
 
 app = Flask(__name__)
 SESSION_TYPE = 'filesystem'
@@ -31,6 +33,10 @@ audioLoc = "./memory/audio/"
 
 @app.route('/')
 def index():
+	return render_template('landingPage.html')
+
+@app.route('/experiment')
+def jikken():
 	session["volume"] = 0
 	session["speed"] = 0
 	session["pitch"] = 0
@@ -44,20 +50,16 @@ def index():
 	session["volume"] = 0
 	session["speed"] = 0
 	session["pitch"] = 0
-	session["timeReg"] = 0
+	session["timeReg"] = time.time()
 	session["audioFile"] = ""
 	session["recording"] = "f"
 	session["posDic"] = {"x":0,"y":0,"w":0,"h":0}
 	session["filename"] = ""
-	return render_template('landingPage.html')
-
-@app.route('/experiment')
-def jikken():
 	return render_template('frontpage.html')
 
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+	return send_from_directory(join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route('/exp')
 def exper():
@@ -117,10 +119,10 @@ def create():
 		db = sql.connect(dbLoc)
 		cursor = db.cursor()
 		cursor.execute("""
-	        INSERT INTO info
-	        (ID, age, gender, originReg, motherLang, spokenLang, whereAbroad, timeAbroad)
-	        VALUES (?,?,?,?,?,?,?,?)
-	    """, register)
+			INSERT INTO info
+			(ID, age, gender, originReg, motherLang, spokenLang, whereAbroad, timeAbroad)
+			VALUES (?,?,?,?,?,?,?,?)
+		""", register)
 		db.commit()
 		db.close()
 
@@ -130,70 +132,29 @@ def create():
 
 @app.route('/audio', methods=['POST'])
 def audio():
-    with open('./audio.wav', 'wb') as f:
-        f.write(request.data)
-    proc = run(['ffprobe', '-of', 'default=noprint_wrappers=1', './audio.wav'], text=True, stderr=PIPE)
-    return proc.stderr
+	with open('./audio.wav', 'wb') as f:
+		f.write(request.data)
+	proc = run(['ffprobe', '-of', 'default=noprint_wrappers=1', './audio.wav'], text=True, stderr=PIPE)
+	return proc.stderr
+
 
 @app.route("/wav")
 def Hanasu():
-
-	session["volume"] = 0
-	session["speed"] = 0
-	session["pitch"] = 0
 	from random import choice, random
-	min_len_words=1
-	max_len_words=10
-	min_len_phrase=1
-	max_len_phrase=1
-	#phonemes = ["あ","い","う","え","お","か","き","く","け","こ","さ","し","す","せ","そ","た","ち","つ","て","と","な","に","ぬ","ね","の","ん","わ","を","や","ゆ","よ","ら","り","る","れ","ろ","は","ひ","ふ","へ","ほ","ま","み","む","め","も","が","ぎ","ぐ","げ","ご","ば","び","ぶ","べ","ぼ","ぱ","ぴ","ぷ","ぺ","ぽ","ざ","じ","ず","ぜ","ぞ","だ","ぢ",]#"じゃ","じゅ","じょ","にゃ","にゅ","にょ","ぎゃ","ぎゅ","ぎょ","びょ","びゃ","びゅ","ふゃ","ふゅ","ふょ","りゃ","りゅ","りょ","きょ","きゃ","きゅ","しゃ","しゅ","しょ","みゃ","みゅ","みょ","ちゃ","ちゅ","ちょ", "ゔぁ", "ゔぇ", "ゔぃ ", "ゔぉ", "ゔ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "ぴゃ","ぴょ","ぴゅ",]
-	consonants=["m", "M", "n[","n","n.","n^","N",'n"',"p","b","t[","d[","t","d","t.","d.","c","J","k","g","q","G","?","s","z","S","Z","s.","z.","P","B","f","v","T","D","C","C<vcd>","x","Q","X",'g"',"H","H<vcd>","h","h<?>","s<lat>","z<lat>", "r<lbd>","r[","r","r.","j","j<vel>",'g"', "l[","l","l.","l^","L","*","*.","*<lat>","b<trl>","r<trl>",'r"',"p!","t!","c!","k!","l!","b`","d`","J`","g`","G`","p`","t[`","t`","c`","k`","q`","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""]
-	otherSymbols=["n<lbv>","t<lbv>","d<lbv>","w<vls>","w"]
-	vowels=["i","y",'i"','u"',"u-","u","I","I.","U","e","Y","@<umd>","o-","o","@","@.","E","W",'V"','O"',"V","O","&","a","a.","A","A."]
-	empty = [""]
-
-	counter0 = 0
-	max_len_phrase = choice(range(min_len_phrase, max_len_phrase+1))
-	phrase = ""
-	while counter0 <= max_len_phrase:
-		counter1 = 0
-		wordlen = choice(range(min_len_words, max_len_words+1))
-		word = ""
-		while counter1 < wordlen:
-			phoneme = choice(choice([vowels,consonants]))
-			phoneme +=  choice(choice([vowels,consonants	,[""]]))
-			if len(phoneme)>1:
-				if phoneme[0] in consonants and phoneme[1] in consonants:
-					phoneme += choice(vowels)
-				elif phoneme[1] in otherSymbols:
-					phoneme +=  choice(choice([vowels,consonants]))
-				else:
-					phoneme +=  choice(choice([vowels,consonants,[""],[""],[""],[""],[""],[""]]))
-			if phoneme in phonemes:
-				counter1+=1
-				word+=phoneme
-		phrase += word+" "
-		counter0 += 1
-	#if isfile("wav.wav"):
-	#	remove ("wav.wav")
-	#open("wav.wav", 'a').close()
-	#system('espeak-ng -v mb	/mb-jp2 -p 150 -s 100 "'+phrase+'" --stdout > wav.wav')
-	phrase = ["[[" + phrase + "]]"]
-	#phrase = HanamogeraTextGenerator()
 	open_jtalk=['espeak']
 	#mech=['-v','art/eo']
 	session["volume"]=str(choice(range(10,200)))
 	session["speed"]=str(choice(range(80,450)))
 	session["pitch"]=str(choice(range(0,99)))
 	vol=["-a", session["volume"]]
-	htsvoice=['-p',session["pitch"]] #TODO ASSIGN DIFFERENT VALUES, STORE RESULTS
-	spd=['-s',session["speed"]] #TODO                ||
-	cmd=open_jtalk+htsvoice+vol+spd+phrase+["--stdout"]#open_jtalk+mech+htsvoice+speed+phrase+["--stdout"]
+	htsvoice=['-p',session["pitch"]]
+	spd=['-s',session["speed"]]
+	phrase = gibberish()
+	cmd=open_jtalk+htsvoice+vol+spd+["[["+phrase+"]]"]+["--stdout"]#open_jtalk+mech+htsvoice+speed+phrase+["--stdout"]
 	c = subprocess.Popen(cmd,stdout=subprocess.PIPE)
 	session["global_phrase"] = phrase
 	print(phrase)
 	def generate():
-		time.sleep(1)
 		audio = c.stdout.read(1024)
 		while audio:
 				yield audio
@@ -227,20 +188,19 @@ def record_status():
 		query = cursor.fetchone()
 		if query is not None:
 			try:
-				pass #encrypt(filename,query[3])
+				pass
 			except:
 				pass
 			try:
 				encrypt(session["audioFile"],query[3])
 			except:
 				pass
-			#filename+=".encrypted"
 			insert=(str(session["current_id"]), str(session["global_phrase"]),str([session["volume"],session["speed"],session["pitch"]]), str(session["audioFile"]), str(session["filename"]), str(session["emotion_timeseries"]),)
 			cursor.execute("""
-		        INSERT INTO analysis
-		        (ID,phrase,prosody,voiceFile,videoFile,emotion)
-		        VALUES (?,?,?,?,?,?)
-		    """, insert)
+				INSERT INTO analysis
+				(ID,phrase,prosody,voiceFile,videoFile,emotion)
+				VALUES (?,?,?,?,?,?)
+			""", insert)
 			db.commit()
 		else:
 			return render_template('frontpage.html')
@@ -249,7 +209,7 @@ def record_status():
 		session["emotion_timeseries"] = []
 		session["timeReg"] = 0
 	try:
-		pass #os.remove(filename)
+		pass
 	except:
 		pass
 
@@ -266,7 +226,6 @@ def receive():
 	frame = data_uri_to_cv2_img(frame)
 	try:
 		if session["recording"][0]=="t":
-			#frame = cv2.resize(frame, (48, 48))
 			session["frame_buffer"].append(frame)
 		else:
 			session["posDic"] = {"x":0,"y":0,"w":0,"h":0}
@@ -314,10 +273,10 @@ def answer():
 		db = sql.connect(dbLoc)
 		cursor = db.cursor()
 		cursor.execute("""
-	        INSERT INTO likert
-	        (ID, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
-	        VALUES (?,?,?,?,?,?,?,?,?,?,?)
-	    """, line)
+			INSERT INTO likert
+			(ID, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
+			VALUES (?,?,?,?,?,?,?,?,?,?,?)
+		""", line)
 		db.commit()
 		db.close()
 		session["current_id"] = None
