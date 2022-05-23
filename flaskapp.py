@@ -188,7 +188,7 @@ def record_status():
 		query = cursor.fetchone()
 		if query is not None:
 			try:
-				pass
+				encrypt(session["filename"],query[3])
 			except:
 				pass
 			try:
