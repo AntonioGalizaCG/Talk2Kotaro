@@ -209,7 +209,7 @@ def record_status():
 		session["emotion_timeseries"] = []
 		session["timeReg"] = 0
 	try:
-		pass
+		os.remove(session["filename"])
 	except:
 		pass
 
