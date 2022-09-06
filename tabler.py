@@ -1,9 +1,14 @@
+#!/usr/bin/env python3
+import os
+import sqlite3 as sql
 
+## Creates a new empty SQLite database with all the correct tables and fields.
 def tabler():
-    import os
-    import sqlite3 as sql
+    ## current directory where the script is being executed; str.
     current_dir = os.getcwd()
+    ## SQLite database.
     db = sql.connect(current_dir+"/memory/profile.sql")
+    ## cursor for acessing the SQLite database.
     cursor = db.cursor()
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS analysis (

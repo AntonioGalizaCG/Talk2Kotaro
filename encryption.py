@@ -3,22 +3,31 @@ from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 import os
 
+## current directory where the script is being executed.
 current_dir = os.getcwd()
 
-def encrypt(filename,key):
+
+## encrypts a file using AES256.
+## @param filename name of the file to be encrypted.
+## @param key private key to be used to encrypt the file.
+def encrypt(filename, key):
+    ## file to be encrypted from the filename; str.
     file_to_encrypt = filename
+    ## buffer size in bytes for the encryption process; int.
     buffer_size = 65536 # 64kb
     # === Encrypt ===
-    # Open the input and output files
+    ## file to be encrypted; file.
     input_file = open(file_to_encrypt, 'rb')
+    ## encrypted file; file.
     output_file = open(file_to_encrypt + '.encrypted', 'wb')
-    # Create the cipher object and encrypt the data
+    ## cipher object and encrypted data
     cipher_encrypt = AES.new(key, AES.MODE_CFB)
     # Initially write the iv to the output file
     output_file.write(cipher_encrypt.iv)
     # Keep reading the file into the buffer, encrypting then writing to the new file
     buffer = input_file.read(buffer_size)
     while len(buffer) > 0:
+        ## ciphered bytes of the input file.
         ciphered_bytes = cipher_encrypt.encrypt(buffer)
         output_file.write(ciphered_bytes)
         buffer = input_file.read(buffer_size)
@@ -26,20 +35,24 @@ def encrypt(filename,key):
     input_file.close()
     output_file.close()
 
-# === Decrypt ===
+
+## decrypts the file
 def decrypt(filename,key):
-# Open the input and output files
+    ## file to be decrypted from the filename; str.
     file_to_encrypt = filename
     print(1)
+    ## buffer size in bytes for the decryption process; int.
     buffer_size = 65536 # 64kb
+    ## Opened file for decryption; file.
     input_file = open(file_to_encrypt, 'rb')
     print(2)
+    ## Decrypted file.
     output_file = open(file_to_encrypt + '.decrypted', 'wb')
     print(3)
-    # Read in the iv
+    ## Read in the iv
     iv = input_file.read(16)
     print(4)
-    # Create the cipher object and encrypt the data
+    ## cipher object and encrypted data
     cipher_encrypt = AES.new(key, AES.MODE_CFB, iv=iv)
     print(5)
     # Keep reading the file into the buffer, decrypting then writing to the new file
@@ -54,17 +67,3 @@ def decrypt(filename,key):
     input_file.close()
     output_file.close()
     print("finished")
-# # === Proving the data matches (hash the files and compare the hashes) ===
-# import hashlib
-#
-# def get_file_hash(file_path):
-#     block_size = 65536
-#     file_hash = hashlib.sha256()
-#     with open(file_path, 'rb') as f:
-#         fb = f.read(block_size)
-#         while len(fb) > 0:
-#             file_hash.update(fb)
-#             fb = f.read(block_size)
-#     return file_hash.hexdigest()
-#
-# assert get_file_hash(file_to_encrypt) == get_file_hash(file_to_encrypt + '.decrypted'), 'Files are not identical'

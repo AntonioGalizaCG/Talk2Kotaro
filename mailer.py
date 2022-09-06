@@ -25,7 +25,9 @@ to = [gmail_user]
 ## @oaram reasons resons for which the guardians are requesting the deletion of
 ## the given profile.
 def Mail(id="",image = None, Reasons=""):
+    ## email subject; str.
     subject = 'Deletion Request from'
+    ## contents of the email; str.
     email_text = """\
     From: %s
     To: %s
@@ -39,6 +41,7 @@ def Mail(id="",image = None, Reasons=""):
     """ % (sent_from, ", ".join(to), subject, id, Reasons,str(image))
 
     try:
+        ## email server; smtplib.SMTP_SSL.
         server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
         server.ehlo()
         server.login(gmail_user, gmail_password)
@@ -58,6 +61,7 @@ def Mail(id="",image = None, Reasons=""):
 ## @oaram Reasons resons for which the guardians are requesting the deletion of
 ## the given profile.
 def Mail2(id="",image = None, Reasons="", email=""):
+    ## email contents; email.mime.multipart.MIMEMultipart.
     message = MIMEMultipart()
     message['From'] = 'talk.with.kotaro@gmail.com'
     message['To'] = 'talk.with.kotaro@gmail.com'
@@ -81,10 +85,12 @@ def Mail2(id="",image = None, Reasons="", email=""):
         #add payload header with filename
         payload.add_header('Content-Decomposition', 'attachment', filename=attach_file_name)
         message.attach(payload)
+    ## email server.
     session = smtplib.SMTP('smtp.gmail.com', 587) #use gmail with port
     session.ehlo()
     session.starttls() #enable security
     session.login(gmail_user, gmail_password) #login with mail_id and password
+    ## contents of the email to be sent; str.
     text = message.as_string()
     session.sendmail(gmail_user, gmail_user, text)
     session.quit()
