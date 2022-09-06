@@ -3,6 +3,10 @@ from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 import os
 
+## @package encryption
+## Contains all functions related to AES encryption for the Talk to Kotaro web
+## platform.
+
 ## current directory where the script is being executed.
 current_dir = os.getcwd()
 

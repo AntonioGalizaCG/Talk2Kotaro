@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['videoloc_134',['videoLoc',['../namespaceflaskapp.html#a5102c5e53da9e433c0e860e0533e860f',1,'flaskapp']]]
+  ['videoloc_140',['videoLoc',['../namespaceflaskapp.html#a5102c5e53da9e433c0e860e0533e860f',1,'flaskapp']]]
 ];

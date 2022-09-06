@@ -2,6 +2,10 @@
 import os
 import sqlite3 as sql
 
+## @package tabler
+## Contains the function tabler, which is responsible for creating a new
+## empty SQLite database with all correct tables and fields. 
+
 ## Creates a new empty SQLite database with all the correct tables and fields.
 def tabler():
     ## current directory where the script is being executed; str.

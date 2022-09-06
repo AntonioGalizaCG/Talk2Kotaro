@@ -1,17 +1,25 @@
 \hypertarget{namespaceutils}{}\doxysection{utils Namespace Reference}
 \label{namespaceutils}\index{utils@{utils}}
+
+
+Contains helper functions which do not fit in the other scripts.  
+
+
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 def \mbox{\hyperlink{namespaceutils_a64f7261fc1e2a812ba24ebbe7d08d80a}{base64\+\_\+to\+\_\+pil\+\_\+image}} (base64\+\_\+img)
-\item 
+\begin{DoxyCompactList}\small\item\em Converts the image from a base64 img to PIL format. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespaceutils_adedbb8d65f031396fed9dda5ad19b2c8}{data\+\_\+uri\+\_\+to\+\_\+cv2\+\_\+img}} (uri)
-\item 
+\begin{DoxyCompactList}\small\item\em Converts the image from the browser side to Open\+CV2 format (np.\+array). \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespaceutils_a9178891741e1d28b9c7622cecdad5a4e}{gibberish}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Generates Kotaro\textquotesingle{}s semantic free speech contents. \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespaceutils_a18b247ce53b90aefb4bb70ea91e9a7b9}{pil\+\_\+image\+\_\+to\+\_\+base64}} (pil\+\_\+image)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Converts the image from the PIL library format to Open\+CV2 format (np.\+array). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Contains helper functions which do not fit in the other scripts. 
 
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{namespaceutils_a64f7261fc1e2a812ba24ebbe7d08d80a}\label{namespaceutils_a64f7261fc1e2a812ba24ebbe7d08d80a}} 
@@ -20,21 +28,65 @@ def \mbox{\hyperlink{namespaceutils_a18b247ce53b90aefb4bb70ea91e9a7b9}{pil\+\_\+
 \doxysubsubsection{\texorpdfstring{base64\_to\_pil\_image()}{base64\_to\_pil\_image()}}
 {\footnotesize\ttfamily def utils.\+base64\+\_\+to\+\_\+pil\+\_\+image (\begin{DoxyParamCaption}\item[{}]{base64\+\_\+img }\end{DoxyParamCaption})}
 
+
+
+Converts the image from a base64 img to PIL format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base64\+\_\+img} & base64 image to be converted. return image converted into PIL\textquotesingle{}s format. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{namespaceutils_adedbb8d65f031396fed9dda5ad19b2c8}\label{namespaceutils_adedbb8d65f031396fed9dda5ad19b2c8}} 
 \index{utils@{utils}!data\_uri\_to\_cv2\_img@{data\_uri\_to\_cv2\_img}}
 \index{data\_uri\_to\_cv2\_img@{data\_uri\_to\_cv2\_img}!utils@{utils}}
 \doxysubsubsection{\texorpdfstring{data\_uri\_to\_cv2\_img()}{data\_uri\_to\_cv2\_img()}}
 {\footnotesize\ttfamily def utils.\+data\+\_\+uri\+\_\+to\+\_\+cv2\+\_\+img (\begin{DoxyParamCaption}\item[{}]{uri }\end{DoxyParamCaption})}
 
+
+
+Converts the image from the browser side to Open\+CV2 format (np.\+array). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uri} & original image from the browser side in bytes; \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em img} & converted image in Open\+CV2 np.\+array format. \\
+\hline
+\end{DoxyRetVals}
 \mbox{\Hypertarget{namespaceutils_a9178891741e1d28b9c7622cecdad5a4e}\label{namespaceutils_a9178891741e1d28b9c7622cecdad5a4e}} 
 \index{utils@{utils}!gibberish@{gibberish}}
 \index{gibberish@{gibberish}!utils@{utils}}
 \doxysubsubsection{\texorpdfstring{gibberish()}{gibberish()}}
 {\footnotesize\ttfamily def utils.\+gibberish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Generates Kotaro\textquotesingle{}s semantic free speech contents. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em phrase} & contents of Kotaro\textquotesingle{}s gibberish speech. \\
+\hline
+\end{DoxyRetVals}
 \mbox{\Hypertarget{namespaceutils_a18b247ce53b90aefb4bb70ea91e9a7b9}\label{namespaceutils_a18b247ce53b90aefb4bb70ea91e9a7b9}} 
 \index{utils@{utils}!pil\_image\_to\_base64@{pil\_image\_to\_base64}}
 \index{pil\_image\_to\_base64@{pil\_image\_to\_base64}!utils@{utils}}
 \doxysubsubsection{\texorpdfstring{pil\_image\_to\_base64()}{pil\_image\_to\_base64()}}
 {\footnotesize\ttfamily def utils.\+pil\+\_\+image\+\_\+to\+\_\+base64 (\begin{DoxyParamCaption}\item[{}]{pil\+\_\+image }\end{DoxyParamCaption})}
 
+
+
+Converts the image from the PIL library format to Open\+CV2 format (np.\+array). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Image} & in the PIL format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+PIL image converter to convert to Open\+CV2 format (np.\+array). 
+\end{DoxyReturn}

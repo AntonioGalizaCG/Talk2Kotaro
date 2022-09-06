@@ -1,18 +1,26 @@
 \hypertarget{namespaceencryption}{}\doxysection{encryption Namespace Reference}
 \label{namespaceencryption}\index{encryption@{encryption}}
+
+
+Contains all functions related to AES encryption for the Talk to Kotaro web platform.  
+
+
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 def \mbox{\hyperlink{namespaceencryption_a03ab4960309a6a18c6c18bceaa4b0929}{decrypt}} (filename, key)
-\item 
+\begin{DoxyCompactList}\small\item\em decrypts the file \end{DoxyCompactList}\item 
 def \mbox{\hyperlink{namespaceencryption_a9d5247261e5bc68c6971f6dc40fdadf6}{encrypt}} (filename, key)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em encrypts a file using AES256. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{namespaceencryption_a795d1912e73739f7fd4b3830a7f105b1}{current\+\_\+dir}} = os.\+getcwd()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em current directory where the script is being executed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Contains all functions related to AES encryption for the Talk to Kotaro web platform. 
 
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{namespaceencryption_a03ab4960309a6a18c6c18bceaa4b0929}\label{namespaceencryption_a03ab4960309a6a18c6c18bceaa4b0929}} 
@@ -20,6 +28,10 @@ def \mbox{\hyperlink{namespaceencryption_a9d5247261e5bc68c6971f6dc40fdadf6}{encr
 \index{decrypt@{decrypt}!encryption@{encryption}}
 \doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
 {\footnotesize\ttfamily def encryption.\+decrypt (\begin{DoxyParamCaption}\item[{}]{filename,  }\item[{}]{key }\end{DoxyParamCaption})}
+
+
+
+decrypts the file 
 
 \mbox{\Hypertarget{namespaceencryption_a9d5247261e5bc68c6971f6dc40fdadf6}\label{namespaceencryption_a9d5247261e5bc68c6971f6dc40fdadf6}} 
 \index{encryption@{encryption}!encrypt@{encrypt}}
@@ -29,10 +41,25 @@ def \mbox{\hyperlink{namespaceencryption_a9d5247261e5bc68c6971f6dc40fdadf6}{encr
 
 
 
+encrypts a file using AES256. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & name of the file to be encrypted. \\
+\hline
+{\em key} & private key to be used to encrypt the file. \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Variable Documentation}
 \mbox{\Hypertarget{namespaceencryption_a795d1912e73739f7fd4b3830a7f105b1}\label{namespaceencryption_a795d1912e73739f7fd4b3830a7f105b1}} 
 \index{encryption@{encryption}!current\_dir@{current\_dir}}
 \index{current\_dir@{current\_dir}!encryption@{encryption}}
 \doxysubsubsection{\texorpdfstring{current\_dir}{current\_dir}}
 {\footnotesize\ttfamily current\+\_\+dir = os.\+getcwd()}
+
+
+
+current directory where the script is being executed. 
 

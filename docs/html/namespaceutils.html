@@ -68,19 +68,28 @@ $(function() {
 <div class="title">utils Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains helper functions which do not fit in the other scripts.  
+<a href="namespaceutils.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a64f7261fc1e2a812ba24ebbe7d08d80a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a64f7261fc1e2a812ba24ebbe7d08d80a">base64_to_pil_image</a> (base64_img)</td></tr>
+<tr class="memdesc:a64f7261fc1e2a812ba24ebbe7d08d80a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the image from a base64 img to PIL format.  <a href="namespaceutils.html#a64f7261fc1e2a812ba24ebbe7d08d80a">More...</a><br /></td></tr>
 <tr class="separator:a64f7261fc1e2a812ba24ebbe7d08d80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adedbb8d65f031396fed9dda5ad19b2c8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#adedbb8d65f031396fed9dda5ad19b2c8">data_uri_to_cv2_img</a> (uri)</td></tr>
+<tr class="memdesc:adedbb8d65f031396fed9dda5ad19b2c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the image from the browser side to OpenCV2 format (np.array).  <a href="namespaceutils.html#adedbb8d65f031396fed9dda5ad19b2c8">More...</a><br /></td></tr>
 <tr class="separator:adedbb8d65f031396fed9dda5ad19b2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9178891741e1d28b9c7622cecdad5a4e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a9178891741e1d28b9c7622cecdad5a4e">gibberish</a> ()</td></tr>
+<tr class="memdesc:a9178891741e1d28b9c7622cecdad5a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates Kotaro's semantic free speech contents.  <a href="namespaceutils.html#a9178891741e1d28b9c7622cecdad5a4e">More...</a><br /></td></tr>
 <tr class="separator:a9178891741e1d28b9c7622cecdad5a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18b247ce53b90aefb4bb70ea91e9a7b9"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceutils.html#a18b247ce53b90aefb4bb70ea91e9a7b9">pil_image_to_base64</a> (pil_image)</td></tr>
+<tr class="memdesc:a18b247ce53b90aefb4bb70ea91e9a7b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the image from the PIL library format to OpenCV2 format (np.array).  <a href="namespaceutils.html#a18b247ce53b90aefb4bb70ea91e9a7b9">More...</a><br /></td></tr>
 <tr class="separator:a18b247ce53b90aefb4bb70ea91e9a7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains helper functions which do not fit in the other scripts. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a64f7261fc1e2a812ba24ebbe7d08d80a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64f7261fc1e2a812ba24ebbe7d08d80a">&#9670;&nbsp;</a></span>base64_to_pil_image()</h2>
 
@@ -96,6 +105,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Converts the image from a base64 img to PIL format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">base64_img</td><td>base64 image to be converted. return image converted into PIL's format. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -115,6 +132,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Converts the image from the browser side to OpenCV2 format (np.array). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uri</td><td>original image from the browser side in bytes; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">img</td><td>converted image in OpenCV2 np.array format. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a9178891741e1d28b9c7622cecdad5a4e"></a>
@@ -131,6 +162,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Generates Kotaro's semantic free speech contents. </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">phrase</td><td>contents of Kotaro's gibberish speech. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -149,6 +188,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Converts the image from the PIL library format to OpenCV2 format (np.array). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Image</td><td>in the PIL format. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>PIL image converter to convert to OpenCV2 format (np.array). </dd></dl>
 
 </div>
 </div>

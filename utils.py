@@ -7,8 +7,10 @@ import numpy as np
 from random import choice, random
 import subprocess
 import soundfile as sf
-import io
+import io]
 
+## @package utils
+## Contains helper functions which do not fit in the other scripts.
 
 ## Converts the image from the browser side to OpenCV2 format (np.array).
 ## @param uri original image from the browser side in bytes;

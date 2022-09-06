@@ -5,6 +5,9 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
+## @package mailer
+## Contains all the necessary methods and variables for sending emails.
+
 ## your e-mail address; str.
 gmail_user = "your_email_user@.your_domain.com"
 ## your e-mail password; str.

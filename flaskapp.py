@@ -24,6 +24,18 @@ from mailer import Mail2
 from random import choice, random
 #from tabler import tabler
 
+## @mainpage Talk to Kotaro: a novel open-source web-based crowdsourcing platform for human-robot interaction experiments
+## Talk to Kotaro was created during the height of the COVID-19 pandemic, when
+## performing Human-robot interaction (HRI) experiments in person became
+## nearly impossible. Like everything else, HRI research had to go online.
+## Many distinct research groups were developing their own solutions, but very
+## few of these were made available for the HRI community. Thus, came the idea
+## of making Talk to Kotaro open-source. It was presented at RO-MAN 2022.
+## authors: Antonio Galiza Cerdeira Gonzalez; Wingsum Lo and Ikuo Mizuuchi.
+## contacts: {antonio,sam,ikuo}@mizuuchi.lab.tuat.ac.jp
+## version: 2.7
+## 2022-09-07
+
 ## Flask app instance.
 ## @param __name__ name of the flask app instance.
 app = Flask(__name__)

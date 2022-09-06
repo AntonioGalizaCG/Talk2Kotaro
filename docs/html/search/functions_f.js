@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['want_116',['want',['../namespaceflaskapp.html#ac77654d8fc8753878e92326ce0f2206f',1,'flaskapp']]]
+  ['tabler_121',['tabler',['../namespacetabler.html#afe783370d2763f021e7b7c21a8600b0c',1,'tabler']]]
 ];
