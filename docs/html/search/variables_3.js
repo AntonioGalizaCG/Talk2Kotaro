@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['emotion_5flabel_5fto_5ftext_127',['emotion_label_to_text',['../namespaceEmotionEstimator.html#a2d04cc5dfc8c0fb7d03ace31fe54ab02',1,'EmotionEstimator']]]
+  ['gmail_5fpassword_110',['gmail_password',['../namespacemailer.html#ac834ef2e431c31b8cea19d76bcfe0325',1,'mailer']]],
+  ['gmail_5fuser_111',['gmail_user',['../namespacemailer.html#af38030c9b21f7ab9bb0318f5ca0e11ad',1,'mailer']]]
 ];

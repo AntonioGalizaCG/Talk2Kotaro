@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['sendimage_58',['sendImage',['../namespaceflaskapp.html#a3d030581dd8bd410655d59a51744b692',1,'flaskapp']]],
-  ['sent_5ffrom_59',['sent_from',['../namespacemailer.html#ae0d0c2f3f253d855eb96b6b5fcba69d1',1,'mailer']]],
-  ['session_5ftype_60',['SESSION_TYPE',['../namespaceflaskapp.html#a18472a311d5a16b50e72ad812261c5cf',1,'flaskapp']]],
-  ['sr_61',['sR',['../namespaceflaskapp.html#a31cd2f53d0e2a6fb84b44c321ffd951b',1,'flaskapp']]]
+  ['tabler_51',['tabler',['../namespacetabler.html',1,'tabler'],['../namespacetabler.html#afe783370d2763f021e7b7c21a8600b0c',1,'tabler.tabler()']]],
+  ['tabler_2epy_52',['tabler.py',['../tabler_8py.html',1,'']]],
+  ['talk_20to_20kotaro_3a_20a_20novel_20open_2dsource_20web_2dbased_20crowdsourcing_20platform_20for_20human_2drobot_20interaction_20experiments_53',['Talk to Kotaro: a novel open-source web-based crowdsourcing platform for human-robot interaction experiments',['../index.html',1,'']]],
+  ['threads_54',['threads',['../namespaceflaskapp.html#aa6539143e2581ab79910cfea7a9320ce',1,'flaskapp']]],
+  ['to_55',['to',['../namespacemailer.html#a366056bcea407c393bcc0cc17d637ac7',1,'mailer']]]
 ];

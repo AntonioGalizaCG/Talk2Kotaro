@@ -3,6 +3,9 @@ import hashlib
 import sqlite3 as sql
 from flaskapp import dbLoc
 
+## @package locker script which contains all functions regarding login ID and
+## password verification and insertion into the database.
+
 
 ## Performs the login credentials verification for a given ID and password
 ## pair.

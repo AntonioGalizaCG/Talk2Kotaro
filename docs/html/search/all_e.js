@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['r_53',['r',['../namespaceflaskapp.html#a2463d92b580c650d4624360442baee1a',1,'flaskapp']]],
-  ['readme_54',['README',['../md_README.html',1,'']]],
-  ['readme_2emd_55',['README.md',['../README_8md.html',1,'']]],
-  ['receive_56',['receive',['../namespaceflaskapp.html#ad1c2581c36a6f4791c24d04c0ca4a8f5',1,'flaskapp']]],
-  ['record_5fstatus_57',['record_status',['../namespaceflaskapp.html#a58a0eb2d3ba24b8211b2e5299098536a',1,'flaskapp']]]
+  ['sendimage_47',['sendImage',['../namespaceflaskapp.html#a3d030581dd8bd410655d59a51744b692',1,'flaskapp']]],
+  ['sent_5ffrom_48',['sent_from',['../namespacemailer.html#ae0d0c2f3f253d855eb96b6b5fcba69d1',1,'mailer']]],
+  ['session_5ftype_49',['SESSION_TYPE',['../namespaceflaskapp.html#a18472a311d5a16b50e72ad812261c5cf',1,'flaskapp']]],
+  ['sr_50',['sR',['../namespaceflaskapp.html#a31cd2f53d0e2a6fb84b44c321ffd951b',1,'flaskapp']]]
 ];

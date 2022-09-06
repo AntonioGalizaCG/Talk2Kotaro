@@ -36,6 +36,10 @@ from random import choice, random
 ## version: 2.7
 ## 2022-09-07
 
+## @package flaskapp Main script of Talk to Kotaro, containing the
+## Flask app which serves the webpages for the browser side and executes every
+## back-end function.
+
 ## Flask app instance.
 ## @param __name__ name of the flask app instance.
 app = Flask(__name__)

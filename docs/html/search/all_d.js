@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['phonemes_50',['phonemes',['../namespaceforbidden__phonemes.html#a4e7c1a18c7665bea3a20e50d20efc178',1,'forbidden_phonemes']]],
-  ['pil_5fimage_5fto_5fbase64_51',['pil_image_to_base64',['../namespaceutils.html#a18b247ce53b90aefb4bb70ea91e9a7b9',1,'utils']]],
-  ['port_52',['port',['../namespaceflaskapp.html#af8fb0f45ee0195c7422a49e6a8d72369',1,'flaskapp']]]
+  ['r_42',['r',['../namespaceflaskapp.html#a2463d92b580c650d4624360442baee1a',1,'flaskapp']]],
+  ['readme_43',['README',['../md_README.html',1,'']]],
+  ['readme_2emd_44',['README.md',['../README_8md.html',1,'']]],
+  ['receive_45',['receive',['../namespaceflaskapp.html#ad1c2581c36a6f4791c24d04c0ca4a8f5',1,'flaskapp']]],
+  ['record_5fstatus_46',['record_status',['../namespaceflaskapp.html#a58a0eb2d3ba24b8211b2e5299098536a',1,'flaskapp']]]
 ];

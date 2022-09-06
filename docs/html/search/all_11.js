@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['utils_67',['utils',['../namespaceutils.html',1,'']]],
-  ['utils_2epy_68',['utils.py',['../utils_8py.html',1,'']]]
+  ['videoloc_58',['videoLoc',['../namespaceflaskapp.html#a5102c5e53da9e433c0e860e0533e860f',1,'flaskapp']]]
 ];

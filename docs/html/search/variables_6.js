@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['interested_5flabels_131',['INTERESTED_LABELS',['../namespaceEmotionEstimator.html#aced6cae7c00182532ecd975b43386fc5',1,'EmotionEstimator']]]
+  ['sent_5ffrom_114',['sent_from',['../namespacemailer.html#ae0d0c2f3f253d855eb96b6b5fcba69d1',1,'mailer']]],
+  ['session_5ftype_115',['SESSION_TYPE',['../namespaceflaskapp.html#a18472a311d5a16b50e72ad812261c5cf',1,'flaskapp']]]
 ];
