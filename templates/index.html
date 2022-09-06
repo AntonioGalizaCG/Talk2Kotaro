@@ -1,0 +1,140 @@
+        <!DOCTYPE html>
+<html>
+<head>
+  <title>Talk to Kotaro</title>
+	<style>
+
+	         #videoElement {
+             width: 640px;
+             height: 480px;
+             display: none;
+             background-color: #666;
+         }
+
+         #imageElement {
+             width: 640px;
+             height: 480px;
+             background-color: #666;
+         }
+
+         #canvasElement {
+             width: 640px;
+             height: 480px;
+             border: 1px solid black;
+         }
+body {
+display: block;
+ background-image: url('./static/IMG/26798203.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+}
+
+.center {
+  position:absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  bottom:0px;
+}
+
+.button{
+  border: none;
+  color: white;
+  margin-left: 50%;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0px;
+  background: transparent;
+  border: none !important;
+}
+
+
+.buttonOut{
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0px;
+  position: relative;
+  display: inline-block;
+  background: transparent;
+  border: none !important;
+}
+
+
+.buttonDelete{
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  width: 200px;
+  margin-left: 72.5%;
+  font-size: 0px;
+  display: inline-block;
+  background: transparent;
+  border: none !important;
+}
+.buttonInfo{
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  width: 200px;
+  margin-left: 30%;
+  font-size: 0px;
+  display: inline-block;
+  background: transparent;
+  border: none !important;
+}
+.avatar{
+display:table;
+  position: relative;
+  width: 70%;
+  margin-left: 14%;
+  margin-right: auto;
+  bottom:-3px;
+}
+.title{
+width: 50%;
+ display:block;
+  position: absolute;
+  margin-left: 26%;
+  margin-right: auto;
+  top:0px
+}
+ </style>
+</head>
+	<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<body>
+ <div >
+<table class="center">
+  <tr>
+	<td> <button id="speak" class="button"><img id="ListenImage" src="./static/IMG/Listen.svg"><img id="SpeakImage" src="./static/IMG/Speak.svg" style="display:none;"><img id="SpeakDisImage" src="./static/IMG/SpeakDisabled.svg" style="display:none;">Listen</button>
+	<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+	<script type="text/javascript" src="./static/recorder.js"></script></td>
+	<td>  <img id="avatar0" src="./static/IMG/Kotaro.svg" class="avatar">
+	<img id="avatar1" src="./static/IMG/Olho+BocaK.svg" class="avatar" style="display: none;">
+	<img id="avatar2" src="./static/IMG/OlhoK.svg" class="avatar" style="display: none;">
+	<img id="avatar3" src="./static/IMG/BocaK.svg" class="avatar" style="display: none;">
+	</td>
+	<td><h1 style="color: green;">Robot Vision</h1>
+			<video autoplay="true" id="videoElement"></video>
+			<canvas id="canvasElement" style=""></canvas>
+			<img id="photo" style="display:none;">
+
+	</td>
+  </tr>
+</table>
+  </div>
+<div>　<a href="likert"><button id="logout" class="buttonOut"><img id="Lout" src="./static/IMG/Logout.svg">Log Out</button></a>   <a href="info"><button id="idInfo" class="buttonInfo"><img id="Info" src="./static/IMG/InformationButton.svg">Experiment Instructions</button></a>
+  <a href="want"><button id="DD" class="buttonDelete"><img id="dEL" src="./static/IMG/DeleteData.svg">Delete my data</button></a>　</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+\hypertarget{namespaceEmotionEstimator}{}\doxysection{Emotion\+Estimator Namespace Reference}
+\label{namespaceEmotionEstimator}\index{EmotionEstimator@{EmotionEstimator}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceEmotionEstimator_ab6c3281a30687e8f19806032143d1218}{build\+\_\+net}} (optim)
+\item 
+def \mbox{\hyperlink{namespaceEmotionEstimator_a2bf0e5a8c6ea3c8ba5c77399c0c25103}{get\+\_\+emotion}} (image\+\_\+)
+\begin{DoxyCompactList}\small\item\em \%\% \mbox{[}code\mbox{]} model\+\_\+yaml = model.\+to\+\_\+yaml() with open(\char`\"{}model.\+yaml\char`\"{}, \char`\"{}w\char`\"{}) as yaml\+\_\+file\+: yaml\+\_\+file.\+write(model\+\_\+yaml) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dictionary \mbox{\hyperlink{namespaceEmotionEstimator_a2d04cc5dfc8c0fb7d03ace31fe54ab02}{emotion\+\_\+label\+\_\+to\+\_\+text}} = \{0\+:\textquotesingle{}anger\textquotesingle{}, 1\+:\textquotesingle{}disgust\textquotesingle{}, 2\+:\textquotesingle{}fear\textquotesingle{}, 3\+:\textquotesingle{}happiness\textquotesingle{}, 4\+: \textquotesingle{}sadness\textquotesingle{}, 5\+: \textquotesingle{}surprise\textquotesingle{}, 6\+: \textquotesingle{}neutral\textquotesingle{}\}
+\item 
+list \mbox{\hyperlink{namespaceEmotionEstimator_aced6cae7c00182532ecd975b43386fc5}{INTERESTED\+\_\+\+LABELS}} = \mbox{[}3, 4, 6\mbox{]}
+\item 
+def \mbox{\hyperlink{namespaceEmotionEstimator_a56726fe52fcec3ec46d4dd913395d5ca}{model}} = \mbox{\hyperlink{namespaceEmotionEstimator_ab6c3281a30687e8f19806032143d1218}{build\+\_\+net}}(\mbox{\hyperlink{namespaceEmotionEstimator_a5b56aeccd0cdc296041f4dde4c030e30}{optims}}\mbox{[}1\mbox{]})
+\item 
+list \mbox{\hyperlink{namespaceEmotionEstimator_a5b56aeccd0cdc296041f4dde4c030e30}{optims}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceEmotionEstimator_ab6c3281a30687e8f19806032143d1218}\label{namespaceEmotionEstimator_ab6c3281a30687e8f19806032143d1218}} 
+\index{EmotionEstimator@{EmotionEstimator}!build\_net@{build\_net}}
+\index{build\_net@{build\_net}!EmotionEstimator@{EmotionEstimator}}
+\doxysubsubsection{\texorpdfstring{build\_net()}{build\_net()}}
+{\footnotesize\ttfamily def Emotion\+Estimator.\+build\+\_\+net (\begin{DoxyParamCaption}\item[{}]{optim }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This is a Deep Convolutional Neural Network (DCNN). For generalization purpose I used dropouts in regular intervals.
+I used `ELU` as the activation because it avoids dying relu problem but also performed well as compared to LeakyRelu
+atleast in this case. `he_normal` kernel initializer is used as it suits ELU. BatchNormalization is also used for better
+results.
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceEmotionEstimator_a2bf0e5a8c6ea3c8ba5c77399c0c25103}\label{namespaceEmotionEstimator_a2bf0e5a8c6ea3c8ba5c77399c0c25103}} 
+\index{EmotionEstimator@{EmotionEstimator}!get\_emotion@{get\_emotion}}
+\index{get\_emotion@{get\_emotion}!EmotionEstimator@{EmotionEstimator}}
+\doxysubsubsection{\texorpdfstring{get\_emotion()}{get\_emotion()}}
+{\footnotesize\ttfamily def Emotion\+Estimator.\+get\+\_\+emotion (\begin{DoxyParamCaption}\item[{}]{image\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+\%\% \mbox{[}code\mbox{]} model\+\_\+yaml = model.\+to\+\_\+yaml() with open(\char`\"{}model.\+yaml\char`\"{}, \char`\"{}w\char`\"{}) as yaml\+\_\+file\+: yaml\+\_\+file.\+write(model\+\_\+yaml) 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceEmotionEstimator_a2d04cc5dfc8c0fb7d03ace31fe54ab02}\label{namespaceEmotionEstimator_a2d04cc5dfc8c0fb7d03ace31fe54ab02}} 
+\index{EmotionEstimator@{EmotionEstimator}!emotion\_label\_to\_text@{emotion\_label\_to\_text}}
+\index{emotion\_label\_to\_text@{emotion\_label\_to\_text}!EmotionEstimator@{EmotionEstimator}}
+\doxysubsubsection{\texorpdfstring{emotion\_label\_to\_text}{emotion\_label\_to\_text}}
+{\footnotesize\ttfamily dictionary emotion\+\_\+label\+\_\+to\+\_\+text = \{0\+:\textquotesingle{}anger\textquotesingle{}, 1\+:\textquotesingle{}disgust\textquotesingle{}, 2\+:\textquotesingle{}fear\textquotesingle{}, 3\+:\textquotesingle{}happiness\textquotesingle{}, 4\+: \textquotesingle{}sadness\textquotesingle{}, 5\+: \textquotesingle{}surprise\textquotesingle{}, 6\+: \textquotesingle{}neutral\textquotesingle{}\}}
+
+\mbox{\Hypertarget{namespaceEmotionEstimator_aced6cae7c00182532ecd975b43386fc5}\label{namespaceEmotionEstimator_aced6cae7c00182532ecd975b43386fc5}} 
+\index{EmotionEstimator@{EmotionEstimator}!INTERESTED\_LABELS@{INTERESTED\_LABELS}}
+\index{INTERESTED\_LABELS@{INTERESTED\_LABELS}!EmotionEstimator@{EmotionEstimator}}
+\doxysubsubsection{\texorpdfstring{INTERESTED\_LABELS}{INTERESTED\_LABELS}}
+{\footnotesize\ttfamily list INTERESTED\+\_\+\+LABELS = \mbox{[}3, 4, 6\mbox{]}}
+
+\mbox{\Hypertarget{namespaceEmotionEstimator_a56726fe52fcec3ec46d4dd913395d5ca}\label{namespaceEmotionEstimator_a56726fe52fcec3ec46d4dd913395d5ca}} 
+\index{EmotionEstimator@{EmotionEstimator}!model@{model}}
+\index{model@{model}!EmotionEstimator@{EmotionEstimator}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily def model = \mbox{\hyperlink{namespaceEmotionEstimator_ab6c3281a30687e8f19806032143d1218}{build\+\_\+net}}(\mbox{\hyperlink{namespaceEmotionEstimator_a5b56aeccd0cdc296041f4dde4c030e30}{optims}}\mbox{[}1\mbox{]})}
+
+\mbox{\Hypertarget{namespaceEmotionEstimator_a5b56aeccd0cdc296041f4dde4c030e30}\label{namespaceEmotionEstimator_a5b56aeccd0cdc296041f4dde4c030e30}} 
+\index{EmotionEstimator@{EmotionEstimator}!optims@{optims}}
+\index{optims@{optims}!EmotionEstimator@{EmotionEstimator}}
+\doxysubsubsection{\texorpdfstring{optims}{optims}}
+{\footnotesize\ttfamily list optims}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [}
+\DoxyCodeLine{2     optimizers.Nadam(learning\_rate=0.01, beta\_1=0.9, beta\_2=0.999, epsilon=1e-\/07, name=\textcolor{stringliteral}{'Nadam'}),}
+\DoxyCodeLine{3     optimizers.Adam(0.01),}
+\DoxyCodeLine{4 ]}
+
+\end{DoxyCode}

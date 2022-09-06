@@ -1,0 +1,100 @@
+\hypertarget{namespacemailer}{}\doxysection{mailer Namespace Reference}
+\label{namespacemailer}\index{mailer@{mailer}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacemailer_aab38b446ad04cec7ea71a0b29b077851}{Mail}} (id=\char`\"{}\char`\"{}, image=None, Reasons=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Function responsible for creating aN email containing a request for deleting a minor\textquotesingle{}s profile, including images in the email\textquotesingle{}s body. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacemailer_a2198682215ccfff64e3df347f9041aae}{Mail2}} (id=\char`\"{}\char`\"{}, image=None, Reasons=\char`\"{}\char`\"{}, email=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Function responsible for creating aN email containing a request for deleting a minor\textquotesingle{}s profile with the possibility of attaching files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacemailer_ac834ef2e431c31b8cea19d76bcfe0325}{gmail\+\_\+password}} = \char`\"{}your\+\_\+password\char`\"{}
+\begin{DoxyCompactList}\small\item\em your e-\/mail password; str. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespacemailer_af38030c9b21f7ab9bb0318f5ca0e11ad}{gmail\+\_\+user}} = \char`\"{}your\+\_\+email\+\_\+user@.your\+\_\+domain.\+com\char`\"{}
+\begin{DoxyCompactList}\small\item\em your e-\/mail address; str. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespacemailer_ae0d0c2f3f253d855eb96b6b5fcba69d1}{sent\+\_\+from}} = \mbox{\hyperlink{namespacemailer_af38030c9b21f7ab9bb0318f5ca0e11ad}{gmail\+\_\+user}}
+\begin{DoxyCompactList}\small\item\em sender of the email, in this case, yourself; str. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespacemailer_a366056bcea407c393bcc0cc17d637ac7}{to}} = \mbox{[}\mbox{\hyperlink{namespacemailer_af38030c9b21f7ab9bb0318f5ca0e11ad}{gmail\+\_\+user}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em list of addresses to which the email will be sente; in this case, only you; list of str. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacemailer_aab38b446ad04cec7ea71a0b29b077851}\label{namespacemailer_aab38b446ad04cec7ea71a0b29b077851}} 
+\index{mailer@{mailer}!Mail@{Mail}}
+\index{Mail@{Mail}!mailer@{mailer}}
+\doxysubsubsection{\texorpdfstring{Mail()}{Mail()}}
+{\footnotesize\ttfamily def mailer.\+Mail (\begin{DoxyParamCaption}\item[{}]{id = {\ttfamily \char`\"{}\char`\"{}},  }\item[{}]{image = {\ttfamily None},  }\item[{}]{Reasons = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Function responsible for creating aN email containing a request for deleting a minor\textquotesingle{}s profile, including images in the email\textquotesingle{}s body. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the ID of the profile to be deleted; str. \\
+\hline
+{\em image} & picture from which face recognition will be performed for deleting the profile of a minor whe the guardians do not know the profile\textquotesingle{}s ID; np.\+array. @oaram reasons resons for which the guardians are requesting the deletion of the given profile. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacemailer_a2198682215ccfff64e3df347f9041aae}\label{namespacemailer_a2198682215ccfff64e3df347f9041aae}} 
+\index{mailer@{mailer}!Mail2@{Mail2}}
+\index{Mail2@{Mail2}!mailer@{mailer}}
+\doxysubsubsection{\texorpdfstring{Mail2()}{Mail2()}}
+{\footnotesize\ttfamily def mailer.\+Mail2 (\begin{DoxyParamCaption}\item[{}]{id = {\ttfamily \char`\"{}\char`\"{}},  }\item[{}]{image = {\ttfamily None},  }\item[{}]{Reasons = {\ttfamily \char`\"{}\char`\"{}},  }\item[{}]{email = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Function responsible for creating aN email containing a request for deleting a minor\textquotesingle{}s profile with the possibility of attaching files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the ID of the profile to be deleted; str. \\
+\hline
+{\em image} & picture from which face recognition will be performed for deleting the profile of a minor whe the guardians do not know the profile\textquotesingle{}s ID; np.\+array. @oaram Reasons resons for which the guardians are requesting the deletion of the given profile. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacemailer_ac834ef2e431c31b8cea19d76bcfe0325}\label{namespacemailer_ac834ef2e431c31b8cea19d76bcfe0325}} 
+\index{mailer@{mailer}!gmail\_password@{gmail\_password}}
+\index{gmail\_password@{gmail\_password}!mailer@{mailer}}
+\doxysubsubsection{\texorpdfstring{gmail\_password}{gmail\_password}}
+{\footnotesize\ttfamily string gmail\+\_\+password = \char`\"{}your\+\_\+password\char`\"{}}
+
+
+
+your e-\/mail password; str. 
+
+\mbox{\Hypertarget{namespacemailer_af38030c9b21f7ab9bb0318f5ca0e11ad}\label{namespacemailer_af38030c9b21f7ab9bb0318f5ca0e11ad}} 
+\index{mailer@{mailer}!gmail\_user@{gmail\_user}}
+\index{gmail\_user@{gmail\_user}!mailer@{mailer}}
+\doxysubsubsection{\texorpdfstring{gmail\_user}{gmail\_user}}
+{\footnotesize\ttfamily string gmail\+\_\+user = \char`\"{}your\+\_\+email\+\_\+user@.your\+\_\+domain.\+com\char`\"{}}
+
+
+
+your e-\/mail address; str. 
+
+\mbox{\Hypertarget{namespacemailer_ae0d0c2f3f253d855eb96b6b5fcba69d1}\label{namespacemailer_ae0d0c2f3f253d855eb96b6b5fcba69d1}} 
+\index{mailer@{mailer}!sent\_from@{sent\_from}}
+\index{sent\_from@{sent\_from}!mailer@{mailer}}
+\doxysubsubsection{\texorpdfstring{sent\_from}{sent\_from}}
+{\footnotesize\ttfamily string sent\+\_\+from = \mbox{\hyperlink{namespacemailer_af38030c9b21f7ab9bb0318f5ca0e11ad}{gmail\+\_\+user}}}
+
+
+
+sender of the email, in this case, yourself; str. 
+
+\mbox{\Hypertarget{namespacemailer_a366056bcea407c393bcc0cc17d637ac7}\label{namespacemailer_a366056bcea407c393bcc0cc17d637ac7}} 
+\index{mailer@{mailer}!to@{to}}
+\index{to@{to}!mailer@{mailer}}
+\doxysubsubsection{\texorpdfstring{to}{to}}
+{\footnotesize\ttfamily list to = \mbox{[}\mbox{\hyperlink{namespacemailer_af38030c9b21f7ab9bb0318f5ca0e11ad}{gmail\+\_\+user}}\mbox{]}}
+
+
+
+list of addresses to which the email will be sente; in this case, only you; list of str. 
+

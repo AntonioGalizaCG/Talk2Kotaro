@@ -1,0 +1,73 @@
+\hypertarget{namespacelocker}{}\doxysection{locker Namespace Reference}
+\label{namespacelocker}\index{locker@{locker}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacelocker_a646db9d30802d408b10ef724f8f39c45}{create\+User}} (ID, password)
+\begin{DoxyCompactList}\small\item\em Creates a new user by iserting the given ID and password pair, while hashing the given password. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacelocker_a461dd43ed7b4b8ea9a7d37d89c5b9bdd}{IDexists}} (ID)
+\begin{DoxyCompactList}\small\item\em Verifies if a given ID is already present at the SQLite database. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacelocker_a44bee78b0d9d56a91ddc3ed7ef10b6ee}{login\+Check}} (ID, password)
+\begin{DoxyCompactList}\small\item\em Performs the login credentials verification for a given ID and password pair. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacelocker_a646db9d30802d408b10ef724f8f39c45}\label{namespacelocker_a646db9d30802d408b10ef724f8f39c45}} 
+\index{locker@{locker}!createUser@{createUser}}
+\index{createUser@{createUser}!locker@{locker}}
+\doxysubsubsection{\texorpdfstring{createUser()}{createUser()}}
+{\footnotesize\ttfamily def locker.\+create\+User (\begin{DoxyParamCaption}\item[{}]{ID,  }\item[{}]{password }\end{DoxyParamCaption})}
+
+
+
+Creates a new user by iserting the given ID and password pair, while hashing the given password. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & login ID to be inserted into the database; str. \\
+\hline
+{\em password} & password to be inserted into the database; str. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacelocker_a461dd43ed7b4b8ea9a7d37d89c5b9bdd}\label{namespacelocker_a461dd43ed7b4b8ea9a7d37d89c5b9bdd}} 
+\index{locker@{locker}!IDexists@{IDexists}}
+\index{IDexists@{IDexists}!locker@{locker}}
+\doxysubsubsection{\texorpdfstring{IDexists()}{IDexists()}}
+{\footnotesize\ttfamily def locker.\+IDexists (\begin{DoxyParamCaption}\item[{}]{ID }\end{DoxyParamCaption})}
+
+
+
+Verifies if a given ID is already present at the SQLite database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & login ID to be verified; str. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em result} & result of the ID check; bool. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{namespacelocker_a44bee78b0d9d56a91ddc3ed7ef10b6ee}\label{namespacelocker_a44bee78b0d9d56a91ddc3ed7ef10b6ee}} 
+\index{locker@{locker}!loginCheck@{loginCheck}}
+\index{loginCheck@{loginCheck}!locker@{locker}}
+\doxysubsubsection{\texorpdfstring{loginCheck()}{loginCheck()}}
+{\footnotesize\ttfamily def locker.\+login\+Check (\begin{DoxyParamCaption}\item[{}]{ID,  }\item[{}]{password }\end{DoxyParamCaption})}
+
+
+
+Performs the login credentials verification for a given ID and password pair. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & login ID to be verified; str. \\
+\hline
+{\em password} & login password to be verified; str. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em result} & result of the login credentials verification; bool. \\
+\hline
+\end{DoxyRetVals}

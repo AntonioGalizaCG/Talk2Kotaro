@@ -1,0 +1,14 @@
+flask
+waitress
+Pillow
+pybase64
+tensorflow==2.5.0
+tensorflow-estimator==2.5.0
+tensorflow-probability==0.12.2
+numpy==1.19.2
+opencv-python
+pandas
+sklearn
+pycryptodome
+psutil
+Flask-Session

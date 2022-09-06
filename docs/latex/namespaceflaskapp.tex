@@ -1,0 +1,367 @@
+\hypertarget{namespaceflaskapp}{}\doxysection{flaskapp Namespace Reference}
+\label{namespaceflaskapp}\index{flaskapp@{flaskapp}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespaceflaskapp_a4e2b61a6cd02fefe5debaa99c77b76fc}{answer}} ()
+\begin{DoxyCompactList}\small\item\em Receives and stores the answers of the Likert Scale questionnaire at the SQLite database and sends the volunteer back to the login page. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_a58b54299b45562eea909bffada532141}{audio}} ()
+\begin{DoxyCompactList}\small\item\em URL call which receives the latest audio file of a volunteer. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_abd52e907afd8ee46700f98123b1e185b}{con}} ()
+\begin{DoxyCompactList}\small\item\em Loads the consent form and experiment explanation page. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_af003e1e610981a0c629f3434cc7895c9}{crear}} ()
+\begin{DoxyCompactList}\small\item\em Loads the profile creation page. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_a3878e32477e536a62108753ac78ca279}{create}} ()
+\begin{DoxyCompactList}\small\item\em Function which handles the creation of volunteers\textquotesingle{} profiles. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_aeb9e5fae1c2735ac0d1ce4fd6ed0f47c}{dele}} ()
+\begin{DoxyCompactList}\small\item\em URL call which handles the deletion of a volunteer\textquotesingle{}s profile and all data related to it. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_a67998a04455e119f4963e3e295e0fa6b}{dmp}} ()
+\begin{DoxyCompactList}\small\item\em Sends the responsible guardian of a minor to the minor\textquotesingle{}s profile and data deletion request webpage. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_a0849d8508ee18fa357d0db4c3276b6ec}{exper}} ()
+\begin{DoxyCompactList}\small\item\em Loads the login page of the experiment without resetting the session. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_a5a41fbf02cb55790537f38a97cda1edb}{favicon}} ()
+\begin{DoxyCompactList}\small\item\em Loads the Talk to Kotaro icon on the browser side. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_a5da6042d38ade9fcefb590220b94279b}{Hanasu}} ()
+\begin{DoxyCompactList}\small\item\em URL call for serving the audio file of Kotaro\textquotesingle{}s synthesized speech to the browser side. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_af8de20a94281dcdd8d9753905774576b}{index}} ()
+\begin{DoxyCompactList}\small\item\em Renders the landing page for the experiment, containing explanation about it. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_adc30be9a4b41432885bb4aa8c5049ef6}{inst}} ()
+\begin{DoxyCompactList}\small\item\em Loads the page which contains the instructions for the experiment. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_a26fc4cfe00b888b1b4e3736bd68aaab9}{jikken}} ()
+\begin{DoxyCompactList}\small\item\em Renders the login page for experiment while setting all session variables as their default values. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_a47a772606ac9c0aa64d05bf3e05989e9}{like}} ()
+\begin{DoxyCompactList}\small\item\em Renders the optional Likert Scale questionnaire page. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_a6d002ad7eac613047fc343d3c927ea3b}{main}} ()
+\begin{DoxyCompactList}\small\item\em Login function which checks if username and password are correct. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_a2463d92b580c650d4624360442baee1a}{r}} ()
+\begin{DoxyCompactList}\small\item\em Saves the latest recording of the volunteer\textquotesingle{}s speech with correct filename convention. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_ad1c2581c36a6f4791c24d04c0ca4a8f5}{receive}} ()
+\begin{DoxyCompactList}\small\item\em Receives a single frame of the current facial expression of a volunteer, converts it to an np.\+array and, if real time face detection is enabled, performs haarcascade face detection and stores the size and location of the first face to be detected. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_a58a0eb2d3ba24b8211b2e5299098536a}{record\+\_\+status}} ()
+\begin{DoxyCompactList}\small\item\em URL call which checks the current state of audio and video recording at the browser side. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_a3d030581dd8bd410655d59a51744b692}{send\+Image}} ()
+\begin{DoxyCompactList}\small\item\em URL call which sends an image file from the browser side to the server. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_a31cd2f53d0e2a6fb84b44c321ffd951b}{sR}} ()
+\begin{DoxyCompactList}\small\item\em Sends an email requesting the deletion of a minor\textquotesingle{}s profile containing its ID and picture for identification purposes. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespaceflaskapp_ac77654d8fc8753878e92326ce0f2206f}{want}} ()
+\begin{DoxyCompactList}\small\item\em Sends users who want to delete the data they have contibuted so far to the deletion request web page. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceflaskapp_afe63fea7be31b0200b496d08bc6b517d}{app}} = Flask(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Flask app instance. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceflaskapp_a59a92124a941938b19239bdb5babf570}{audio\+Loc}} = \char`\"{}./memory/\mbox{\hyperlink{namespaceflaskapp_a58b54299b45562eea909bffada532141}{audio}}/\char`\"{}
+\begin{DoxyCompactList}\small\item\em Location where the audio recordings of what volunteers tell Kotaro are stored. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceflaskapp_a795d1912e73739f7fd4b3830a7f105b1}{current\+\_\+dir}} = getcwd()
+\begin{DoxyCompactList}\small\item\em Current location where the main script is running. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceflaskapp_ab31a353aa4546d02307dfe50d27b4154}{db\+Loc}} = \char`\"{}./memory/profile.\+sql\char`\"{}
+\begin{DoxyCompactList}\small\item\em Location of the SQLite database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceflaskapp_a832ddc04754e8a43d4f3c6165b1294a7}{host}}
+\item 
+\mbox{\hyperlink{namespaceflaskapp_af8fb0f45ee0195c7422a49e6a8d72369}{port}}
+\item 
+string \mbox{\hyperlink{namespaceflaskapp_a18472a311d5a16b50e72ad812261c5cf}{SESSION\+\_\+\+TYPE}} = \textquotesingle{}filesystem\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Session type for flask\+\_\+session, storing the current session information as files in the flask\+\_\+session folder in the server or in the docker container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceflaskapp_aa6539143e2581ab79910cfea7a9320ce}{threads}}
+\item 
+string \mbox{\hyperlink{namespaceflaskapp_a5102c5e53da9e433c0e860e0533e860f}{video\+Loc}} = \char`\"{}./memory/video/\char`\"{}
+\begin{DoxyCompactList}\small\item\em Location where the video of the facial expression of volunteers are stored. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceflaskapp_a4e2b61a6cd02fefe5debaa99c77b76fc}\label{namespaceflaskapp_a4e2b61a6cd02fefe5debaa99c77b76fc}} 
+\index{flaskapp@{flaskapp}!answer@{answer}}
+\index{answer@{answer}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{answer()}{answer()}}
+{\footnotesize\ttfamily def flaskapp.\+answer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Receives and stores the answers of the Likert Scale questionnaire at the SQLite database and sends the volunteer back to the login page. 
+
+\mbox{\Hypertarget{namespaceflaskapp_a58b54299b45562eea909bffada532141}\label{namespaceflaskapp_a58b54299b45562eea909bffada532141}} 
+\index{flaskapp@{flaskapp}!audio@{audio}}
+\index{audio@{audio}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{audio()}{audio()}}
+{\footnotesize\ttfamily def flaskapp.\+audio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+URL call which receives the latest audio file of a volunteer. 
+
+\mbox{\Hypertarget{namespaceflaskapp_abd52e907afd8ee46700f98123b1e185b}\label{namespaceflaskapp_abd52e907afd8ee46700f98123b1e185b}} 
+\index{flaskapp@{flaskapp}!con@{con}}
+\index{con@{con}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{con()}{con()}}
+{\footnotesize\ttfamily def flaskapp.\+con (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads the consent form and experiment explanation page. 
+
+\mbox{\Hypertarget{namespaceflaskapp_af003e1e610981a0c629f3434cc7895c9}\label{namespaceflaskapp_af003e1e610981a0c629f3434cc7895c9}} 
+\index{flaskapp@{flaskapp}!crear@{crear}}
+\index{crear@{crear}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{crear()}{crear()}}
+{\footnotesize\ttfamily def flaskapp.\+crear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads the profile creation page. 
+
+\mbox{\Hypertarget{namespaceflaskapp_a3878e32477e536a62108753ac78ca279}\label{namespaceflaskapp_a3878e32477e536a62108753ac78ca279}} 
+\index{flaskapp@{flaskapp}!create@{create}}
+\index{create@{create}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily def flaskapp.\+create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function which handles the creation of volunteers\textquotesingle{} profiles. 
+
+Returns to the login page if there are no errors, loads the profile creation error page otherwise. \mbox{\Hypertarget{namespaceflaskapp_aeb9e5fae1c2735ac0d1ce4fd6ed0f47c}\label{namespaceflaskapp_aeb9e5fae1c2735ac0d1ce4fd6ed0f47c}} 
+\index{flaskapp@{flaskapp}!dele@{dele}}
+\index{dele@{dele}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{dele()}{dele()}}
+{\footnotesize\ttfamily def flaskapp.\+dele (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+URL call which handles the deletion of a volunteer\textquotesingle{}s profile and all data related to it. 
+
+\mbox{\Hypertarget{namespaceflaskapp_a67998a04455e119f4963e3e295e0fa6b}\label{namespaceflaskapp_a67998a04455e119f4963e3e295e0fa6b}} 
+\index{flaskapp@{flaskapp}!dmp@{dmp}}
+\index{dmp@{dmp}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{dmp()}{dmp()}}
+{\footnotesize\ttfamily def flaskapp.\+dmp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sends the responsible guardian of a minor to the minor\textquotesingle{}s profile and data deletion request webpage. 
+
+\mbox{\Hypertarget{namespaceflaskapp_a0849d8508ee18fa357d0db4c3276b6ec}\label{namespaceflaskapp_a0849d8508ee18fa357d0db4c3276b6ec}} 
+\index{flaskapp@{flaskapp}!exper@{exper}}
+\index{exper@{exper}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{exper()}{exper()}}
+{\footnotesize\ttfamily def flaskapp.\+exper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads the login page of the experiment without resetting the session. 
+
+\mbox{\Hypertarget{namespaceflaskapp_a5a41fbf02cb55790537f38a97cda1edb}\label{namespaceflaskapp_a5a41fbf02cb55790537f38a97cda1edb}} 
+\index{flaskapp@{flaskapp}!favicon@{favicon}}
+\index{favicon@{favicon}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{favicon()}{favicon()}}
+{\footnotesize\ttfamily def flaskapp.\+favicon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads the Talk to Kotaro icon on the browser side. 
+
+\mbox{\Hypertarget{namespaceflaskapp_a5da6042d38ade9fcefb590220b94279b}\label{namespaceflaskapp_a5da6042d38ade9fcefb590220b94279b}} 
+\index{flaskapp@{flaskapp}!Hanasu@{Hanasu}}
+\index{Hanasu@{Hanasu}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{Hanasu()}{Hanasu()}}
+{\footnotesize\ttfamily def flaskapp.\+Hanasu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+URL call for serving the audio file of Kotaro\textquotesingle{}s synthesized speech to the browser side. 
+
+\mbox{\Hypertarget{namespaceflaskapp_af8de20a94281dcdd8d9753905774576b}\label{namespaceflaskapp_af8de20a94281dcdd8d9753905774576b}} 
+\index{flaskapp@{flaskapp}!index@{index}}
+\index{index@{index}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily def flaskapp.\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renders the landing page for the experiment, containing explanation about it. 
+
+\mbox{\Hypertarget{namespaceflaskapp_adc30be9a4b41432885bb4aa8c5049ef6}\label{namespaceflaskapp_adc30be9a4b41432885bb4aa8c5049ef6}} 
+\index{flaskapp@{flaskapp}!inst@{inst}}
+\index{inst@{inst}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{inst()}{inst()}}
+{\footnotesize\ttfamily def flaskapp.\+inst (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads the page which contains the instructions for the experiment. 
+
+\mbox{\Hypertarget{namespaceflaskapp_a26fc4cfe00b888b1b4e3736bd68aaab9}\label{namespaceflaskapp_a26fc4cfe00b888b1b4e3736bd68aaab9}} 
+\index{flaskapp@{flaskapp}!jikken@{jikken}}
+\index{jikken@{jikken}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{jikken()}{jikken()}}
+{\footnotesize\ttfamily def flaskapp.\+jikken (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renders the login page for experiment while setting all session variables as their default values. 
+
+\mbox{\Hypertarget{namespaceflaskapp_a47a772606ac9c0aa64d05bf3e05989e9}\label{namespaceflaskapp_a47a772606ac9c0aa64d05bf3e05989e9}} 
+\index{flaskapp@{flaskapp}!like@{like}}
+\index{like@{like}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{like()}{like()}}
+{\footnotesize\ttfamily def flaskapp.\+like (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renders the optional Likert Scale questionnaire page. 
+
+\mbox{\Hypertarget{namespaceflaskapp_a6d002ad7eac613047fc343d3c927ea3b}\label{namespaceflaskapp_a6d002ad7eac613047fc343d3c927ea3b}} 
+\index{flaskapp@{flaskapp}!main@{main}}
+\index{main@{main}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def flaskapp.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Login function which checks if username and password are correct. 
+
+Loads the experiment main page if correct, loads login error page otherewise. \mbox{\Hypertarget{namespaceflaskapp_a2463d92b580c650d4624360442baee1a}\label{namespaceflaskapp_a2463d92b580c650d4624360442baee1a}} 
+\index{flaskapp@{flaskapp}!r@{r}}
+\index{r@{r}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{r()}{r()}}
+{\footnotesize\ttfamily def flaskapp.\+r (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saves the latest recording of the volunteer\textquotesingle{}s speech with correct filename convention. 
+
+\mbox{\Hypertarget{namespaceflaskapp_ad1c2581c36a6f4791c24d04c0ca4a8f5}\label{namespaceflaskapp_ad1c2581c36a6f4791c24d04c0ca4a8f5}} 
+\index{flaskapp@{flaskapp}!receive@{receive}}
+\index{receive@{receive}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily def flaskapp.\+receive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Receives a single frame of the current facial expression of a volunteer, converts it to an np.\+array and, if real time face detection is enabled, performs haarcascade face detection and stores the size and location of the first face to be detected. 
+
+\mbox{\Hypertarget{namespaceflaskapp_a58a0eb2d3ba24b8211b2e5299098536a}\label{namespaceflaskapp_a58a0eb2d3ba24b8211b2e5299098536a}} 
+\index{flaskapp@{flaskapp}!record\_status@{record\_status}}
+\index{record\_status@{record\_status}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{record\_status()}{record\_status()}}
+{\footnotesize\ttfamily def flaskapp.\+record\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+URL call which checks the current state of audio and video recording at the browser side. 
+
+If there is a frame buffer and recording has stopped, the server side saves the video and audio, cryptographs them, stores the latest utterance information (speech contents and prosody) at the SQLite database and deletes original non-\/cryptographed files. \mbox{\Hypertarget{namespaceflaskapp_a3d030581dd8bd410655d59a51744b692}\label{namespaceflaskapp_a3d030581dd8bd410655d59a51744b692}} 
+\index{flaskapp@{flaskapp}!sendImage@{sendImage}}
+\index{sendImage@{sendImage}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{sendImage()}{sendImage()}}
+{\footnotesize\ttfamily def flaskapp.\+send\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+URL call which sends an image file from the browser side to the server. 
+
+This function is currently only used for receiving images for requesting the deletion of the profile of underage volunteers. \mbox{\Hypertarget{namespaceflaskapp_a31cd2f53d0e2a6fb84b44c321ffd951b}\label{namespaceflaskapp_a31cd2f53d0e2a6fb84b44c321ffd951b}} 
+\index{flaskapp@{flaskapp}!sR@{sR}}
+\index{sR@{sR}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{sR()}{sR()}}
+{\footnotesize\ttfamily def flaskapp.\+sR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sends an email requesting the deletion of a minor\textquotesingle{}s profile containing its ID and picture for identification purposes. 
+
+\mbox{\Hypertarget{namespaceflaskapp_ac77654d8fc8753878e92326ce0f2206f}\label{namespaceflaskapp_ac77654d8fc8753878e92326ce0f2206f}} 
+\index{flaskapp@{flaskapp}!want@{want}}
+\index{want@{want}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{want()}{want()}}
+{\footnotesize\ttfamily def flaskapp.\+want (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sends users who want to delete the data they have contibuted so far to the deletion request web page. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceflaskapp_afe63fea7be31b0200b496d08bc6b517d}\label{namespaceflaskapp_afe63fea7be31b0200b496d08bc6b517d}} 
+\index{flaskapp@{flaskapp}!app@{app}}
+\index{app@{app}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily app = Flask(\+\_\+\+\_\+name\+\_\+\+\_\+)}
+
+
+
+Flask app instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$strong$>$name$<$/strong$>$} & name of the flask app instance. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespaceflaskapp_a59a92124a941938b19239bdb5babf570}\label{namespaceflaskapp_a59a92124a941938b19239bdb5babf570}} 
+\index{flaskapp@{flaskapp}!audioLoc@{audioLoc}}
+\index{audioLoc@{audioLoc}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{audioLoc}{audioLoc}}
+{\footnotesize\ttfamily string audio\+Loc = \char`\"{}./memory/\mbox{\hyperlink{namespaceflaskapp_a58b54299b45562eea909bffada532141}{audio}}/\char`\"{}}
+
+
+
+Location where the audio recordings of what volunteers tell Kotaro are stored. 
+
+\mbox{\Hypertarget{namespaceflaskapp_a795d1912e73739f7fd4b3830a7f105b1}\label{namespaceflaskapp_a795d1912e73739f7fd4b3830a7f105b1}} 
+\index{flaskapp@{flaskapp}!current\_dir@{current\_dir}}
+\index{current\_dir@{current\_dir}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{current\_dir}{current\_dir}}
+{\footnotesize\ttfamily current\+\_\+dir = getcwd()}
+
+
+
+Current location where the main script is running. 
+
+\mbox{\Hypertarget{namespaceflaskapp_ab31a353aa4546d02307dfe50d27b4154}\label{namespaceflaskapp_ab31a353aa4546d02307dfe50d27b4154}} 
+\index{flaskapp@{flaskapp}!dbLoc@{dbLoc}}
+\index{dbLoc@{dbLoc}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{dbLoc}{dbLoc}}
+{\footnotesize\ttfamily string db\+Loc = \char`\"{}./memory/profile.\+sql\char`\"{}}
+
+
+
+Location of the SQLite database. 
+
+\mbox{\Hypertarget{namespaceflaskapp_a832ddc04754e8a43d4f3c6165b1294a7}\label{namespaceflaskapp_a832ddc04754e8a43d4f3c6165b1294a7}} 
+\index{flaskapp@{flaskapp}!host@{host}}
+\index{host@{host}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily host}
+
+\mbox{\Hypertarget{namespaceflaskapp_af8fb0f45ee0195c7422a49e6a8d72369}\label{namespaceflaskapp_af8fb0f45ee0195c7422a49e6a8d72369}} 
+\index{flaskapp@{flaskapp}!port@{port}}
+\index{port@{port}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily port}
+
+\mbox{\Hypertarget{namespaceflaskapp_a18472a311d5a16b50e72ad812261c5cf}\label{namespaceflaskapp_a18472a311d5a16b50e72ad812261c5cf}} 
+\index{flaskapp@{flaskapp}!SESSION\_TYPE@{SESSION\_TYPE}}
+\index{SESSION\_TYPE@{SESSION\_TYPE}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{SESSION\_TYPE}{SESSION\_TYPE}}
+{\footnotesize\ttfamily string SESSION\+\_\+\+TYPE = \textquotesingle{}filesystem\textquotesingle{}}
+
+
+
+Session type for flask\+\_\+session, storing the current session information as files in the flask\+\_\+session folder in the server or in the docker container. 
+
+\mbox{\Hypertarget{namespaceflaskapp_aa6539143e2581ab79910cfea7a9320ce}\label{namespaceflaskapp_aa6539143e2581ab79910cfea7a9320ce}} 
+\index{flaskapp@{flaskapp}!threads@{threads}}
+\index{threads@{threads}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{threads}{threads}}
+{\footnotesize\ttfamily threads}
+
+\mbox{\Hypertarget{namespaceflaskapp_a5102c5e53da9e433c0e860e0533e860f}\label{namespaceflaskapp_a5102c5e53da9e433c0e860e0533e860f}} 
+\index{flaskapp@{flaskapp}!videoLoc@{videoLoc}}
+\index{videoLoc@{videoLoc}!flaskapp@{flaskapp}}
+\doxysubsubsection{\texorpdfstring{videoLoc}{videoLoc}}
+{\footnotesize\ttfamily string video\+Loc = \char`\"{}./memory/video/\char`\"{}}
+
+
+
+Location where the video of the facial expression of volunteers are stored. 
+

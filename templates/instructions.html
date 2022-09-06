@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Talk to Kotaro</title>
+</head>
+<style>
+	body {
+		display: block;
+		background-image: url('./static/IMG/26798203.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+	div {
+		display: flex;
+		justify-content: center;
+	}
+</style>
+<body>
+
+
+<div>
+<button id="eng" style="height:40px;width:100px">English</button>
+
+<button id="jap" style="height:40px;width:100px">日本語</button>
+
+<button id="esp" style="height:40px;width:100px">Español</button>
+
+<button id="ptbr" style="height:40px;width:100px">Português</button>
+</div>
+
+<div>
+<p></p>
+</div>
+<h1 id="Title">Experiment Instructions</h1>
+<div>
+<textarea id="exp" readonly name="w3review" rows="45" cols="75" style="resize: none;">
+
+1. You need a webcam to participate;
+2. Perform the experiment in a well-lit place;
+3. Enter your login ID, password and more to create your profile.
+From the second time onward, please log in with the login ID and password you created;
+4. When you are ready to speak, click the Talk button;
+5. When you're done talking, click the button again;
+6. The avatar will speak, so listen and react naturally;
+7. You can repeat steps 4-6 as often as you like, but please, do not close the page before the avatar stops speaking;
+8. If you have time to log out, please complete a 10-item survey.
+9. If you want to delete all the collected data, click the "Delete data" button at any time.
+Click and click the "OK" button to confirm.
+
+</textarea>
+
+</div>
+
+<div>
+<img id="mail" src="./static/IMG/mail.png">
+</div>
+
+<div>
+<a href="return" id=test><button id="go" style="height:40px;width:100px">Return to Experiment</button></a>
+
+</div>
+<script type="text/javascript" src="./static/instrs.js"></script>
+
+</body>
+</html>

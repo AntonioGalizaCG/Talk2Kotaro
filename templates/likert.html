@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Talk to Kotaro</title>
+</head>
+<style>
+
+	div {
+		display: flex;
+		justify-content: center;
+	}
+  table,
+  table td {
+    border: 1px solid #cccccc;
+  }
+  td {
+    height: 80px;
+    width: 160px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  input[type='radio'] {
+    transform: scale(4);
+}
+header{
+width:100%;
+text-align:center;
+color:#ffffff;
+background-color:#48cc7a;
+}
+</style>
+<header>
+<table style="width:100%; text-align:center;">
+<thead>
+<tr>
+  <th>  <a href="http://mizuuchi.lab.tuat.ac.jp/"><img src="../static/IMG/MizuuchiLabLogo.png" alt="MizuuchiLabLogo" style="width: 25%;height: auto;"></a></th>
+  <th style="width:30%;">  <h1>Talk to Kotaro!</h1>
+<h3>and help making robots speak better</h3></th>
+  <th> <a href="https://www.tuat.ac.jp/"><img src="../static/IMG/TUAT.png" alt="MizuuchiLabLogo" style="width: 50%;height: auto;"></a> </th>
+</tr>
+</thead>
+</table>
+</header>
+<body>
+
+<div>
+<button id="eng" style="height:40px;width:100px">English</button>
+
+<button id="jap" style="height:40px;width:100px">日本語</button>
+
+<button id="esp" style="height:40px;width:100px">Español</button>
+
+<button id="ptbr" style="height:40px;width:100px">Português</button>
+</div>
+
+<div>
+<h1 id="expLik"> If you have time to help us even more, answer this questionnaire.</h1>
+</div>
+<form action="likert_answer" method = "POST">
+
+<div>
+<table>
+ <tr>
+   <th><h3 id="ST">Statement</h3></th>
+   <th><h3 id="SD">Strongly Disagree</h3></th>
+   <th><h3 id="D">Disagree</h3></th>
+   <th><h3 id="N">Neutral</h3></th>
+   <th><h3 id="A">Agree</h3></th>
+   <th><h3 id="SA">Strongly Agree</h3></th>
+ </tr>
+ <tr>
+   <td><p id="q1">Talking with the robot avatar was interesting</p> </td>
+   <td><input type="radio" id="A11" name="likert1" value="1"></td>
+   <td> <input type="radio" id="A12" name="likert1" value="2"></td>
+   <td><input type="radio" id="A13" name="likert1" value="3"></td>
+   <td><input type="radio" id="A14" name="likert1" value="4"></td>
+   <td><input type="radio" id="A15" name="likert1" value="5"></td>
+ </tr>
+ <tr>
+  <td><p id="q2">Variation of the speech characteristics made conversation more natural</p> </td>
+  <td><input type="radio" id="A21" name="likert2" value="1"></td>
+  <td><input type="radio" id="A22" name="likert2" value="2"></td>
+  <td><input type="radio" id="A23" name="likert2" value="3"></td>
+  <td><input type="radio" id="A24" name="likert2" value="4"></td>
+  <td><input type="radio" id="A25" name="likert2" value="5"></td>
+ </tr>
+ <tr>
+  <td><p id="q3">Some randomly generated words are less pleasant than others</p> </td>
+  <td><input type="radio" id="A31" name="likert3" value="1"></td>
+  <td><input type="radio" id="A32" name="likert3" value="2"></td>
+  <td><input type="radio" id="A33" name="likert3" value="3"></td>
+  <td><input type="radio" id="A34" name="likert3" value="4"></td>
+  <td><input type="radio" id="A35" name="likert3" value="5"></td>
+ </tr>
+ <tr>
+  <td><p id="q4">Some speech 	characteristics, such as speed, loudness or pitch influence more than others</p></td>
+  <td><input type="radio" id="A41" name="likert4" value="1"></td>
+  <td><input type="radio" id="A42" name="likert4" value="2"></td>
+  <td><input type="radio" id="A43" name="likert4" value="3"></td>
+  <td><input type="radio" id="A44" name="likert4" value="4"></td>
+  <td><input type="radio" id="A45" name="likert4" value="5"></td>
+ </tr>
+ <tr>
+  <td><p id="q5">Different random words didn’t have an impact on your enjoyment</p></td>
+  <td><input type="radio" id="A51" name="likert5" value="1"></td>
+  <td><input type="radio" id="A52" name="likert5" value="2"></td>
+  <td><input type="radio" id="A53" name="likert5" value="3"></td>
+  <td><input type="radio" id="A54" name="likert5" value="4"></td>
+  <td><input type="radio" id="A55" name="likert5" value="5"></td>
+ </tr>
+ <tr>
+  <td><p id="q6">You felt that the robot was answering your speech accordingly</p></td>
+  <td><input type="radio" id="A61" name="likert6" value="1"></td>
+  <td><input type="radio" id="A62" name="likert6" value="2"></td>
+  <td><input type="radio" id="A63" name="likert6" value="3"></td>
+  <td><input type="radio" id="A64" name="likert6" value="4"></td>
+  <td><input type="radio" id="A65" name="likert6" value="5"></td>
+ </tr>
+ <tr>
+  <td><p id="q7">Longer phrases were more interesting</p> </td>
+  <td><input type="radio" id="A71" name="likert7" value="1"></td>
+  <td><input type="radio" id="A72" name="likert7" value="2"></td>
+  <td><input type="radio" id="A73" name="likert7" value="3"></td>
+  <td><input type="radio" id="A74" name="likert7" value="4"></td>
+  <td><input type="radio" id="A75" name="likert7" value="5"></td>
+ </tr>
+ <tr>
+  <td><p id="q8">The turn-based conversation felt unnatural</p> </td>
+  <td><input type="radio" id="A81" name="likert8" value="1"></td>
+  <td><input type="radio" id="A82" name="likert8" value="2"></td>
+  <td><input type="radio" id="A83" name="likert8" value="3"></td>
+  <td><input type="radio" id="A84" name="likert8" value="4"></td>
+  <td><input type="radio" id="A85" name="likert8" value="5"></td>
+ </tr>
+ <tr>
+  <td><p id="q9">Foreign sounding phonemes were more interesting</p> </td>
+  <td><input type="radio" id="A91" name="likert9" value="1"></td>
+  <td><input type="radio" id="A92" name="likert9" value="2"></td>
+  <td><input type="radio" id="A93" name="likert9" value="3"></td>
+  <td><input type="radio" id="A94" name="likert9" value="4"></td>
+  <td><input type="radio" id="A95" name="likert9" value="5"></td>
+ </tr>
+ <tr>
+  <td><p id="q10">The robot seemed to be intelligent</p> </td>
+  <td><input type="radio" id="A101" name="likert10" value="1"></td>
+  <td><input type="radio" id="A102" name="likert10" value="2"></td>
+  <td><input type="radio" id="A103" name="likert10" value="3"></td>
+  <td><input type="radio" id="A104" name="likert10" value="4"></td>
+  <td><input type="radio" id="A105" name="likert10" value="5"></td>
+ </tr>
+</table>
+</div>
+<div style="text-align: center">
+<input id="go" type="submit" value="Submit" style="height:70px;width:200px;font-size : 20px; ">
+</div>
+</body>
+<script type="text/javascript" src="./static/likert.js"></script>
+</html>
