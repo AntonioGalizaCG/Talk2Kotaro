@@ -14,7 +14,7 @@ from locker import *
 from encryption import *
 import sqlite3 as sql
 import numpy as np
-from forbidden_phonemes import *
+#from forbidden_phonemes import *
 import os
 import psutil
 import io
@@ -366,10 +366,10 @@ def receive():
 	return "1"
 
 
-# MARKED FOR DELETION, THOROUGLY CHECK BEFORE DOING SO.
-# @app.route('/voice')
-# def voic():
-# 	return render_template('audio.html')
+#MARKED FOR DELETION, THOROUGLY CHECK BEFORE DOING SO.
+@app.route('/voice')
+def voic():
+	return render_template('audio.html')
 
 
 ## Saves the latest recording of the volunteer's speech with correct filename

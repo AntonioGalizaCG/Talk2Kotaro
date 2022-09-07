@@ -40,6 +40,9 @@ buttonSpeak.onclick = function() {
 			//buttonSpeak.innerText="Listen";
       document.getElementById("ListenImage").style.display = "none";
       document.getElementById("SpeakImage").style.display = "block";
+      document.getElementById("avatar1").style.display = "none";
+      document.getElementById("avatar2").style.display = "block";
+
 			rec.stop();
 			//stop microphone access
 			gumStream.getAudioTracks()[0].stop();
@@ -84,38 +87,7 @@ buttonSpeak.onclick = function() {
 
 var vis = false;
 var boca = false;
-function Blinker(){
-	var roll = Math.floor(Math.random() * 50);
-	if (roll==0){
-		vis = !vis;
-	}else{
-		if(vis){
-			if (boca){
-				document.getElementById("avatar0").style.display = "none";
-				document.getElementById("avatar1").style.display = "block";
-				document.getElementById("avatar2").style.display = "none";
-				document.getElementById("avatar3").style.display = "none";
-			}else{
-				document.getElementById("avatar0").style.display = "none";
-				document.getElementById("avatar1").style.display = "none";
-				document.getElementById("avatar2").style.display = "block";
-				document.getElementById("avatar3").style.display = "none";
-			}
-		}else{
-			if (boca){
-				document.getElementById("avatar0").style.display = "none";
-				document.getElementById("avatar1").style.display = "none";
-				document.getElementById("avatar2").style.display = "none";
-				document.getElementById("avatar3").style.display = "block";
-			}else{
-				document.getElementById("avatar0").style.display = "block";
-				document.getElementById("avatar1").style.display = "none";
-				document.getElementById("avatar2").style.display = "none";
-				document.getElementById("avatar3").style.display = "none";
-			}
-		}
-	}
-};
+
 function Mouther(){
 	if(!audio.paused){
 		boca = !boca;
@@ -132,6 +104,8 @@ function Mouther(){
         document.getElementById("SpeakImage").style.display = "none";
         document.getElementById("SpeakDisImage").style.display = "none";
         document.getElementById("ListenImage").style.display = "block";
+        document.getElementById("avatar1").style.display = "block";
+        document.getElementById("avatar2").style.display = "none";
 				reccer = false;
 				var xhr = new XMLHttpRequest();
 				xhr.onreadystatechange = function() {
@@ -146,7 +120,6 @@ function Mouther(){
 	}
 }
 
-setInterval(Blinker, 50);
 setInterval(Mouther, 200);
 
 var frequency = 300;
