@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+          <title>Talk to Kotaro</title>
+        </head>
+        <style>
+
+        	div {
+        		display: flex;
+        		justify-content: center;
+        	}
+          table,
+          table td {
+            border: 1px solid #cccccc;
+          }
+          td {
+            height: 160px;
+            width: 160px;
+            text-align: center;
+            vertical-align: middle;
+          }
+          input[type='radio'] {
+            transform: scale(4);
+        }
+        </style>
+        <form action="MyQuestionnaire.html" method = "POST">
+        <div>
+        <table>
+				<tr>
+					<td><p id=q1>You Love cheese</p></td>
+						<td><p>Disagree</p><input type="radio" id="A11" name="q1" value="1"><p>
+</p></td>
+						<td><p>Neutral</p><input type="radio" id="A12" name="q1" value="2"><p>
+</p></td>
+						<td><p>Agree</p><input type="radio" id="A13" name="q1" value="3"><p>
+</p></td>
+				</tr>
+				<tr>
+					<td><p id=q2>You believe milk is good for the bones</p></td>
+						<td><p>ANS1</p><input type="radio" id="A21" name="q2" value="1"><p>
+</p></td>
+						<td><p>ANS2</p><input type="radio" id="A22" name="q2" value="2"><p>
+</p></td>
+						<td><p>ANS3</p><input type="radio" id="A23" name="q2" value="3"><p>
+</p></td>
+				</tr>
+				<tr>
+					<td><p id=q3>You hate mustard</p></td>
+						<td><p>ANS1</p><input type="radio" id="A31" name="q3" value="1"><p>
+</p></td>
+						<td><p>ANS2</p><input type="radio" id="A32" name="q3" value="2"><p>
+</p></td>
+				</tr>
+				</table>
+        </div>
+            <div>
+                <input id="go" type="submit" value="Submit" style="height:70px;width:200px;font-size : 20px; ">
+            </div>
+            </body>
+        </html>
